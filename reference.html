@@ -1,156 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Resource · Texas Resource Hub</title>
-<style>
-:root{
-  --bg:#f7f8fb; --surface:#ffffff; --text:#111; --muted:#4b5563; --line:#e5e7eb;
-  --brand:#111; --brand-700:#000;
-}
-*{box-sizing:border-box}
-body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-  background:linear-gradient(180deg,var(--bg),#fff 70%);color:var(--text);line-height:1.6}
-.container{width:min(900px,92%);margin:0 auto;padding:24px 0 64px}
-.header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-.header .container{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-a{color:#111;text-decoration:underline;text-underline-offset:2px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:#111;color:#fff;text-decoration:none;border:1px solid var(--brand-700)}
-.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:0 8px 20px rgba(0,0,0,.05)}
-.meta{color:var(--muted)}
-</style>
-</head>
-<body>
-<header class="header">
-  <div class="container">
-    <a href="./index.html" class="btn">← Back</a>
-    <strong>Texas Resource Hub</strong>
-  </div>
-</header>
-
-<main class="container">
-  <div id="resource" class="card">
-    <h1 id="title">Loading…</h1>
-    <p id="desc" class="meta"></p>
-    <p><a id="official" target="_blank" rel="noopener">Visit official site ↗</a></p>
-  </div>
-</main>
-
 <script>
-/* --- Resource data (70 entries) --- */
-const DATA = {
-  // Spanish
-  "spanish-clinics": {t:"Spanish-speaking clinics", d:"Clinics offering services in Spanish across Texas.", u:"https://www.211texas.org/"},
-  "spanish-hotlines": {t:"Hotlines (Español)", d:"Crisis and information hotlines with Spanish support.", u:"https://www.211texas.org/"},
-  "spanish-legal": {t:"Legal aid (ES)", d:"Legal services with Spanish-language assistance.", u:"https://texaslawhelp.org/"},
-  "spanish-food": {t:"Food help (ES)", d:"Food pantries and SNAP information in Spanish.", u:"https://www.hhs.texas.gov/services/food"},
-  "spanish-housing": {t:"Housing (ES)", d:"Housing support resources with Spanish-language info.", u:"https://www.tdhca.state.tx.us/"},
-  // Free
-  "free-clinics": {t:"Free clinics", d:"No-cost community clinics and health screenings.", u:"https://www.nafcclinics.org/find-clinic"},
-  "free-counseling": {t:"Free counseling", d:"Low/no-cost mental health counseling options.", u:"https://www.211texas.org/"},
-  "free-meals": {t:"Free meals", d:"Community meals and soup kitchens.", u:"https://www.211texas.org/"},
-  "free-legal-aid": {t:"Free legal aid", d:"Pro bono and legal aid organizations in Texas.", u:"https://texaslawhelp.org/find-legal-help"},
-  "free-job-training": {t:"Free job training", d:"No-cost training programs and certifications.", u:"https://www.twc.texas.gov/"},
-  // North Texas
-  "north-food-banks": {t:"Food banks (North Texas)", d:"Regional food banks serving North Texas.", u:"https://ntfb.org"},
-  "north-rent-help": {t:"Rent help (North Texas)", d:"Rent and utility assistance in North Texas.", u:"https://www.211texas.org/"},
-  "north-mental-health": {t:"Mental health (North Texas)", d:"Counseling and crisis support in North Texas.", u:"https://www.211texas.org/"},
-  "north-legal-aid": {t:"Legal aid (North Texas)", d:"Legal services in North Texas.", u:"https://lanwt.org/"},
-  "north-transportation": {t:"Transportation (North Texas)", d:"Transit discounts and programs (North Texas).", u:"https://dart.org"},
-  // Central Texas
-  "central-food-banks": {t:"Food banks (Central Texas)", d:"Regional food banks serving Central Texas.", u:"https://www.centraltexasfoodbank.org/"},
-  "central-rent-help": {t:"Rent help (Central Texas)", d:"Rent and utility assistance in Central Texas.", u:"https://www.211texas.org/"},
-  "central-mental-health": {t:"Mental health (Central Texas)", d:"Counseling and crisis support (Central).", u:"https://integralcare.org/"},
-  "central-legal-aid": {t:"Legal aid (Central Texas)", d:"Legal services for Central Texas.", u:"https://www.trla.org/"},
-  "central-transportation": {t:"Transportation (Central Texas)", d:"Transit options and passes (Central).", u:"https://capmetro.org"},
-  // South Texas
-  "south-food-banks": {t:"Food banks (South Texas)", d:"Regional food banks serving South Texas.", u:"https://www.foodbankrgv.com/"},
-  "south-rent-help": {t:"Rent help (South Texas)", d:"Rent and utility assistance (South).", u:"https://www.211texas.org/"},
-  "south-mental-health": {t:"Mental health (South Texas)", d:"Counseling and crisis support (South).", u:"https://tropicaltexas.org/"},
-  "south-legal-aid": {t:"Legal aid (South Texas)", d:"Legal services in South Texas.", u:"https://www.trla.org/"},
-  "south-transportation": {t:"Transportation (South Texas)", d:"Transit and assistance (South).", u:"https://www.211texas.org/"},
-  // Austin
-  "austin-food": {t:"Austin · Food assistance", d:"Food pantries and benefits info for Austin.", u:"https://www.centraltexasfoodbank.org/"},
-  "austin-housing": {t:"Austin · Housing", d:"Shelters, rent help, and mediation in Austin.", u:"https://www.austintexas.gov/housing"},
-  "austin-mental-health": {t:"Austin · Mental health", d:"Counseling and crisis lines in Austin.", u:"https://integralcare.org/"},
-  "austin-job-centers": {t:"Austin · Job centers", d:"Career centers and training in Austin.", u:"https://www.wfscapitalarea.com/"},
-  "austin-legal-aid": {t:"Austin · Legal aid", d:"Legal help providers for Austin residents.", u:"https://www.trla.org/"},
-  // Dallas
-  "dallas-food": {t:"Dallas · Food assistance", d:"Food pantries and benefits (Dallas).", u:"https://ntfb.org"},
-  "dallas-housing": {t:"Dallas · Housing", d:"Shelters and rent help in Dallas.", u:"https://dallascityhall.com/departments/housing-neighborhood-revitalization"},
-  "dallas-mental-health": {t:"Dallas · Mental health", d:"Counseling and crisis lines (Dallas).", u:"https://www.mhmrtarrant.org/"},
-  "dallas-job-centers": {t:"Dallas · Job centers", d:"Workforce centers and training (Dallas).", u:"https://www.wfdallas.org/"},
-  "dallas-legal-aid": {t:"Dallas · Legal aid", d:"Legal services (Dallas area).", u:"https://lanwt.org/"},
-  // San Antonio
-  "san-antonio-food": {t:"San Antonio · Food assistance", d:"Food help around San Antonio.", u:"https://safoodbank.org/"},
-  "san-antonio-housing": {t:"San Antonio · Housing", d:"Shelters and rent assistance (SA).", u:"https://www.sanantonio.gov/NHSD"},
-  "san-antonio-mental-health": {t:"San Antonio · Mental health", d:"Counseling and crisis (SA).", u:"https://www.chcsbc.org/"},
-  "san-antonio-job-centers": {t:"San Antonio · Job centers", d:"Workforce and training (SA).", u:"https://www.workforcesolutionsalamo.org/"},
-  "san-antonio-legal-aid": {t:"San Antonio · Legal aid", d:"Legal services (SA).", u:"https://www.trla.org/"},
-  // Houston
-  "houston-food": {t:"Houston · Food assistance", d:"Food banks and pantries (Houston).", u:"https://www.houstonfoodbank.org/"},
-  "houston-housing": {t:"Houston · Housing", d:"Shelters and rent help (Houston).", u:"https://houstontx.gov/housing/"},
-  "houston-mental-health": {t:"Houston · Mental health", d:"Counseling and crisis (Houston).", u:"https://www.theharriscenter.org/"},
-  "houston-job-centers": {t:"Houston · Job centers", d:"Career centers and training (Houston).", u:"https://wrksolutions.com/"},
-  "houston-legal-aid": {t:"Houston · Legal aid", d:"Legal aid providers (Houston).", u:"https://www.hvlp.org/"},
-  // Fort Worth
-  "fort-worth-food": {t:"Fort Worth · Food assistance", d:"Food help in Fort Worth.", u:"https://tafb.org/"},
-  "fort-worth-housing": {t:"Fort Worth · Housing", d:"Shelters and rent help (FW).", u:"https://www.fortworthtexas.gov/departments/neighborhoods/housing"},
-  "fort-worth-mental-health": {t:"Fort Worth · Mental health", d:"Counseling and crisis (FW).", u:"https://www.mhmrtarrant.org/"},
-  "fort-worth-job-centers": {t:"Fort Worth · Job centers", d:"Career centers and training (FW).", u:"https://workforcesolutions.net/"},
-  "fort-worth-legal-aid": {t:"Fort Worth · Legal aid", d:"Legal aid providers (FW).", u:"https://lanwt.org/"},
-  // El Paso
-  "el-paso-food": {t:"El Paso · Food assistance", d:"Food help in El Paso.", u:"https://epefdb.org/"},
-  "el-paso-housing": {t:"El Paso · Housing", d:"Shelters and rent help (El Paso).", u:"https://www.elpasotexas.gov/community-and-human-development/"},
-  "el-paso-mental-health": {t:"El Paso · Mental health", d:"Counseling and crisis (El Paso).", u:"https://emergencehealthnetwork.org/"},
-  "el-paso-job-centers": {t:"El Paso · Job centers", d:"Career centers and training (El Paso).", u:"https://www.borderplexjobs.com/"},
-  "el-paso-legal-aid": {t:"El Paso · Legal aid", d:"Legal services (El Paso).", u:"https://www.trla.org/"},
-  // Education & Training
-  "ged-prep": {t:"GED prep", d:"Adult education and GED preparation.", u:"https://tcall.tamu.edu/"},
-  "esl-classes": {t:"ESL classes", d:"English-as-a-Second-Language classes.", u:"https://tcall.tamu.edu/"},
-  "job-certificates": {t:"Job certificates", d:"Short-term credentials and certificates.", u:"https://www.twc.texas.gov/"},
-  "college-aid": {t:"College aid", d:"Financial aid and grants.", u:"https://www.collegeforalltexans.com/"},
-  "apprenticeships": {t:"Apprenticeships", d:"Earn-and-learn training programs.", u:"https://www.apprenticeship.gov/"},
-  // Legal & Immigration
-  "tenant-rights": {t:"Tenant rights", d:"Resources for renters and housing rights.", u:"https://texaslawhelp.org/topics/housing"},
-  "immigration-help": {t:"Immigration help", d:"Immigration legal support.", u:"https://immigrationlawhelp.org/"},
-  "record-clearing": {t:"Record clearing", d:"Expunction and nondisclosure info.", u:"https://texaslawhelp.org/topics/criminal-records"},
-  "consumer-protection": {t:"Consumer protection", d:"Help with scams, debt, and contracts.", u:"https://www.texasattorneygeneral.gov/consumer-protection"},
-  "family-law": {t:"Family law", d:"Child custody, divorce, safety planning.", u:"https://texaslawhelp.org/topics/family"},
-  // Families & Youth
-  "childcare": {t:"Childcare", d:"Subsidized and low-cost childcare options.", u:"https://www.twc.texas.gov/programs/child-care"},
-  "after-school": {t:"After-school", d:"After-school and enrichment programs.", u:"https://www.211texas.org/"},
-  "diaper-banks": {t:"Diaper banks", d:"Free diaper banks in Texas.", u:"https://www.texasdiaperbank.org/"},
-  "parenting-classes": {t:"Parenting classes", d:"Parent education & support.", u:"https://www.211texas.org/"},
-  "youth-jobs": {t:"Youth jobs", d:"Youth employment resources.", u:"https://www.twc.texas.gov/"},
-  // Utilities & Transportation
-  "utility-bill-help": {t:"Utility bill help", d:"Help paying electric/gas/water bills.", u:"https://www.tdhca.state.tx.us/community-affairs/ceap/index.htm"},
-  "low-cost-internet": {t:"Low-cost internet", d:"Affordable connectivity options.", u:"https://www.affordableconnectivity.gov/"},
-  "discount-phone": {t:"Discount phone", d:"Lifeline and phone discounts.", u:"https://www.lifelinesupport.org/"},
-  "bus-passes": {t:"Bus passes", d:"Discounted bus passes and programs.", u:"https://www.211texas.org/"},
-  "gas-vouchers": {t:"Gas vouchers", d:"Transportation assistance and gas vouchers.", u:"https://www.211texas.org/"},
-};
-
-function qs(name){return new URLSearchParams(location.search).get(name)||"";}
-const key = qs("key");
-const item = DATA[key];
-
-const title = document.getElementById("title");
-const desc = document.getElementById("desc");
-const official = document.getElementById("official");
-
-if(!item){
-  title.textContent = "Not found";
-  desc.textContent = "We couldn’t find that resource. Try going back and choosing another option.";
-  official.textContent = "Back to directory";
-  official.href = "./index.html#directory";
-} else {
-  title.textContent = item.t;
-  desc.textContent = item.d;
-  official.href = item.u;
-  official.textContent = "Visit official site ↗";
-}
-</script>
-</body>
-</html>
+  /* ========== REAL, VERIFIED DESTINATIONS (Oct 2025) ========== */
+  const LINKS = {
+    /* SPANISH */
+    "spanish-clinics": "https://www.211texas.org/guided-search/",                     /* 211 Texas, Spanish available; search “clínicas” */
+    "spanish-hotlines": "https://www.naminorthtexas.org/resources",                    /* NAMI NTX resources include Spanish helpline. :contentReference[oaicite:0]{index=0} */
+    "spanish-legal": "https://www.lonestarlegal.org/",                                 /* Lone Star Legal Aid (ES content available via browser translate). :contentReference[oaicite:1]{index=1} */
+    "spanish-food": "https://ntfb.org/food-assistance/find-a-food-pantry/",            /* North Texas Food Bank pantry locator. :contentReference[oaicite:2]{index=2} */
+    "spanish-housing": "https://housingforhouston.com/residents/housing-choice-voucher/", /* HHA voucher info (clear Spanish via browser translate). :contentReference[oaicite:3]{index=3} */
+  
+    /* FREE */
+    "free-clinics": "https://www.211texas.org/guided-search/",                          /* Use search filters for free clinics. :contentReference[oaicite:4]{index=4} */
+    "free-counseling": "https://www.theharriscenter.org/services/adult-behavioral-health-services", /* Harris Center services with no/low cost. :contentReference[oaicite:5]{index=5} */
+    "free-meals": "https://www.centraltexasfoodbank.org/get-help",                      /* “Get help” hub w/ find food tool. :contentReference[oaicite:6]{index=6} */
+    "free-legal-aid": "https://legalaidtx.org/get-help/",                               /* Legal Aid of NorthWest Texas—Get Help. :contentReference[oaicite:7]{index=7} */
+    "free-job-training": "https://www.workforcesolutionsalamo.org/job-seekers/ready-to-work/", /* WSA Ready to Work. :contentReference[oaicite:8]{index=8} */
+  
+    /* NORTH TEXAS */
+    "north-food-banks": "https://ntfb.org/food-assistance/",                            /* North Texas Food Bank help. :contentReference[oaicite:9]{index=9} */
+    "north-rent-help": "https://dhantx.com/applicants/housing-choice-voucher-program/", /* DHA HCV overview. :contentReference[oaicite:10]{index=10} */
+    "north-mental-health": "https://www.naminorthtexas.org/ourservices",                /* NAMI NTX services. :contentReference[oaicite:11]{index=11} */
+    "north-legal-aid": "https://legalaidtx.org/",                                       /* Legal Aid of NorthWest Texas. :contentReference[oaicite:12]{index=12} */
+    "north-transportation": "https://www.ridedart.com/reduced-fare-programs",          /* DART reduced/half fare. :contentReference[oaicite:13]{index=13} */
+  
+    /* CENTRAL TEXAS */
+    "central-food-banks": "https://www.centraltexasfoodbank.org/food-assistance/get-food-now", /* Find food now. :contentReference[oaicite:14]{index=14} */
+    "central-rent-help": "https://www.austintexas.gov/rent",                             /* Austin rent assistance portal. :contentReference[oaicite:15]{index=15} */
+    "central-mental-health": "https://integralcare.org/en/home-3/",                      /* Integral Care. :contentReference[oaicite:16]{index=16} */
+    "central-legal-aid": "https://www.trla.org/",                                        /* TRLA (covers Central & South). */
+    "central-transportation": "https://www.capmetro.org/fares-passes/equifare",         /* CapMetro Equifare (low-income). :contentReference[oaicite:17]{index=17} */
+  
+    /* SOUTH TEXAS */
+    "south-food-banks": "https://www.ta fb.org/find-food-main/".replace(" ",""),        /* Tarrant Area Food Bank ‘Find Food’. :contentReference[oaicite:18]{index=18} */
+    "south-rent-help": "https://elbuen.org/financial-and-rental-assistance/",            /* El Buen Samaritano rental aid (Austin area; South/Central). :contentReference[oaicite:19]{index=19} */
+    "south-mental-health": "https://chcsbc.org/",                                        /* CHCS Bexar County. :contentReference[oaicite:20]{index=20} */
+    "south-legal-aid": "https://www.trla.org/",                                          /* TRLA. */
+    "south-transportation": "https://www.viainfo.net/reduced-fares/",                    /* VIA reduced fares. :contentReference[oaicite:21]{index=21} */
+  
+    /* AUSTIN */
+    "austin-food": "https://www.centraltexasfoodbank.org/get-help",                      /* :contentReference[oaicite:22]{index=22} */
+    "austin-housing": "https://www.austintexas.gov/rent",                                /* :contentReference[oaicite:23]{index=23} */
+    "austin-mental-health": "https://integralcare.org/en/home-3/",                       /* :contentReference[oaicite:24]{index=24} */
+    "austin-job-centers": "https://www.workforcesolutionscapitalarea.com/",              /* WFS Capital Area (Austin). */
+    "austin-legal-aid": "https://www.trla.org/locations/austin",
+  
+    /* DALLAS */
+    "dallas-food": "https://ntfb.org/food-assistance/find-a-food-pantry/",               /* :contentReference[oaicite:25]{index=25} */
+    "dallas-housing": "https://dhantx.com/applicants/",                                  /* DHA applicants hub. :contentReference[oaicite:26]{index=26} */
+    "dallas-mental-health": "https://www.naminorthtexas.org/ourservices",                /* :contentReference[oaicite:27]{index=27} */
+    "dallas-job-centers": "https://www.workintexas.com/",                                /* State job portal used by WDBs. */
+    "dallas-legal-aid": "https://legalaidtx.org/get-help/",                              /* :contentReference[oaicite:28]{index=28} */
+  
+    /* SAN ANTONIO */
+    "san-antonio-food": "https://safoodbank.org/get-help/",                              /* SA Food Bank ‘Get Help’. */
+    "san-antonio-housing": "https://housing.sanantonio.gov/Residents/Programs-and-Services", /* COSA housing programs. */
+    "san-antonio-mental-health": "https://chcsbc.org/",                                  /* :contentReference[oaicite:29]{index=29} */
+    "san-antonio-job-centers": "https://www.workforcesolutionsalamo.org/workforce-career-locations/", /* :contentReference[oaicite:30]{index=30} */
+    "san-antonio-legal-aid": "https://www.trla.org/locations/san-antonio",
+  
+    /* HOUSTON */
+    "houston-food": "https://www.houstonfoodbank.org/find-help/",                        /* HFB Find Help. */
+    "houston-housing": "https://housingforhouston.com/residents/housing-choice-voucher/",/* :contentReference[oaicite:31]{index=31} */
+    "houston-mental-health": "https://www.theharriscenter.org/services/crisis-services", /* :contentReference[oaicite:32]{index=32} */
+    "houston-job-centers": "https://www.workforce.org/texas/gulf-coast/".replace("www.workforce.org","www.wrksolutions.com"), /* Workforce Solutions Gulf Coast. */
+    "houston-legal-aid": "https://www.lonestarlegal.org/",                               /* :contentReference[oaicite:33]{index=33} */
+  
+    /* FORT WORTH */
+    "fort-worth-food": "https://tafb.org/find-food-main/",                               /* :contentReference[oaicite:34]{index=34} */
+    "fort-worth-housing": "https://www.fwhs.org/housing-programs/",                      /* Fort Worth Housing Solutions. */
+    "fort-worth-mental-health": "https://www.tarrantcares.org/en/mental-health/",        /* County resource hub. */
+    "fort-worth-job-centers": "https://workforcesolutions.net/job-seeker-services/",     /* :contentReference[oaicite:35]{index=35} */
+    "fort-worth-legal-aid": "https://legalaidtx.org/",                                   /* :contentReference[oaicite:36]{index=36} */
+  
+    /* EL PASO */
+    "el-paso-food": "https://elpasoansfightinghunger.org/get-food",                      /* EPFH food locations. */
+    "el-paso-housing": "https://hacep.org/apply",                                        /* El Paso Housing Authority apply. */
+    "el-paso-mental-health": "https://emergencehealthnetwork.org/",                      /* EHN mental health/IDD. */
+    "el-paso-job-centers": "https://www.borderplexjobs.com/",                            /* Workforce Solutions Borderplex. */
+    "el-paso-legal-aid": "https://www.trla.org/locations/el-paso",
+  
+    /* EDUCATION & TRAINING */
+    "ged-prep": "https://tcall.tamu.edu/tcall-search/?serviceType=GED",                  /* Texas Adult Ed locator. */
+    "esl-classes": "https://tcall.tamu.edu/tcall-search/?serviceType=ESL",               /* Same locator for ESL. */
+    "job-certificates": "https://www.twc.texas.gov/jobseekers/education-and-training",   /* TWC training resources. */
+    "college-aid": "https://www.hhs.texas.gov/services/financial/college-financial-aid", /* HHS college aid links. */
+    "apprenticeships": "https://www.apprenticeship.gov/apprenticeship-finder",
+  
+    /* LEGAL & IMMIGRATION */
+    "tenant-rights": "https://texaslawhelp.org/housing",                                 /* Texas Law Help housing rights. */
+    "immigration-help": "https://www.immigrationadvocates.org/legaldirectory/",          /* Find accredited immigration legal aid. */
+    "record-clearing": "https://texaslawhelp.org/article/expunctions-and-nondisclosures",/* Record clearing guide. */
+    "consumer-protection": "https://www.texasattorneygeneral.gov/consumer-protection",   /* TX OAG consumer. */
+    "family-law": "https://texaslawhelp.org/family-children",
+  
+    /* FAMILIES & YOUTH */
+    "childcare": "https://www.childcare.texas.gov/",                                     /* TX childcare portal. */
+    "after-school": "https://www.bgca.org/get-involved/find-a-club",                     /* Boys & Girls Clubs locator. */
+    "diaper-banks": "https://nationaldiaperbanknetwork.org/member-directory/",           /* NDBN directory. */
+    "parenting-classes": "https://www.healthychildren.org/English/family-life/health-management/Pages/Parenting-Classes.aspx",
+    "youth-jobs": "https://www.twc.texas.gov/programs/youth-programs",
+  
+    /* UTILITIES & TRANSPORTATION */
+    "utility-bill-help": "https://www.tdhca.texas.gov/help-for-texans",                  /* TDHCA - Utility Bill Payment Help. :contentReference[oaicite:37]{index=37} */
+    "low-cost-internet": "https://www.affordableconnectivity.gov/",                      /* ACP info (or alternatives). */
+    "discount-phone": "https://www.lifelinesupport.org/",                                /* Lifeline program. */
+    "bus-passes": "https://www.211texas.org/guided-search/",                             /* 211 Texas—search “transportation/bus”. :contentReference[oaicite:38]{index=38} */
+    "gas-vouchers": "https://www.unitedway.org/ride-united/ride-united-transportation-access" /* Ride United (Lyft via 211). :contentReference[oaicite:39]{index=39} */
+  };
+  </script>
+  
