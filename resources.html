@@ -1,115 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Texas Resource Hub | Directory</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <meta name="description" content="Search and filter Texas-wide resources by category, cost, city, and accessibility." />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <meta name="theme-color" content="#06b6d4" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="TX Resource Hub" />
-  <link rel="apple-touch-icon" href="manifest.webmanifest" />
+  <title>Loading resource…</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    :root{--text:#111;--muted:#6b7280}
+    html,body{height:100%}
+    body{margin:0;display:grid;place-items:center;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    .wrap{max-width:720px;padding:24px}
+    h1{font-size:1.2rem;margin:0 0 6px}
+    p{margin:.2rem 0;color:var(--muted)}
+    code{background:#f3f4f6;border:1px solid #e5e7eb;border-radius:6px;padding:.1rem .35rem}
+    a{color:#111}
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
-      <a class="logo" href="index.html">Texas Resource Hub</a>
-      <nav aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
-        <ul id="nav" class="nav">
-          <li><a class="active" href="resources.html">Directory</a></li>
-          <li><a href="highlights.html">Highlights</a></li>
-          <li><a href="submit.html">Suggest a Resource</a></li>
-          <li><a href="reference.html">Reference</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="wrap">
+    <h1>Finding your resource…</h1>
+    <p>If nothing happens, <a id="fallback" href="#" rel="noopener">tap here</a>.</p>
+    <p id="status"></p>
+  </div>
 
-  <main class="container">
-    <h1>Resource Directory</h1>
-    <p class="muted">Explore programs across Texas. Search and filter by city, category, cost, and accessibility. Links open in a new tab.</p>
+  <script>
+    (function () {
+      // Map the ?key= to a real, credible external URL
+      const LINKS = {
+        // Spanish
+        "spanish-clinics": "https://findahealthcenter.hrsa.gov/",
+        "spanish-hotlines": "https://988lifeline.org/help-yourself/en-espanol/",
+        "spanish-legal": "https://www.lawhelp.org/languages/spanish",
+        "spanish-food": "https://www.feedingamerica.org/es/encuentra-tu-banco-de-alimentos",
+        "spanish-housing": "https://www.hud.gov/espanol",
 
-    <!-- Filters -->
-    <form id="filters" class="filters" aria-label="Directory filters">
-      <label for="q" class="sr-only">Search</label>
-      <input id="q" name="q" type="search" placeholder="Search by name or keyword" />
+        // Free
+        "free-clinics": "https://www.nafcclinics.org/find-clinic/",
+        "free-counseling": "https://www.nami.org/Support-Education/Support-Groups",
+        "free-meals": "https://www.feedingamerica.org/find-your-local-foodbank",
+        "free-legal-aid": "https://www.lsc.gov/what-legal-aid/find-legal-aid",
+        "free-job-training": "https://www.twc.texas.gov/jobseekers",
 
-      <label for="category" class="sr-only">Category</label>
-      <select id="category" name="category">
-        <option value="">All categories</option>
-        <option>Food Assistance</option>
-        <option>Mental Health</option>
-        <option>Housing</option>
-        <option>Education</option>
-        <option>Legal Aid</option>
-        <option>Employment</option>
-        <option>Health</option>
-        <option>Youth</option>
-      </select>
+        // North Texas
+        "north-food-banks": "https://ntfb.org/get-help/",
+        "north-rent-help": "https://www.dallascounty.org/departments/dchhs/rent-utilities.php",
+        "north-mental-health": "https://www.naminorthtexas.org/get-help",
+        "north-legal-aid": "https://lanwt.org/get-help",
+        "north-transportation": "https://www.dart.org/fares/reduced-fares",
 
-      <label for="cost" class="sr-only">Cost</label>
-      <select id="cost" name="cost">
-        <option value="">Any cost</option>
-        <option value="free">Free</option>
-        <option value="sliding">Sliding scale</option>
-        <option value="low-cost">Low-cost</option>
-        <option value="paid">Paid</option>
-      </select>
+        // Central Texas
+        "central-food-banks": "https://www.centraltexasfoodbank.org/get-food-now",
+        "central-rent-help": "https://elbuen.org/financial-and-rental-assistance/",
+        "central-mental-health": "https://www.integralcare.org/services/",
+        "central-legal-aid": "https://www.trla.org/help",
+        "central-transportation": "https://www.capmetro.org/fares/reduced/",
 
-      <label for="city" class="sr-only">City</label>
-      <input id="city" name="city" type="text" placeholder="City (e.g., Houston, Dallas, El Paso)" />
+        // South Texas
+        "south-food-banks": "https://safoodbank.org/help/",
+        "south-rent-help": "https://www.sa.gov/Directory/Departments/NHSD/Housing-Support/Renter-Support/Rental-Assistance",
+        "south-mental-health": "https://chcsbc.org/",
+        "south-legal-aid": "https://www.sa-lsa.org/get-help/",
+        "south-transportation": "https://www.viainfo.net/reduced-fares/",
 
-      <label for="accessibility" class="sr-only">Accessibility</label>
-      <select id="accessibility" name="accessibility">
-        <option value="">Accessibility</option>
-        <option value="wheelchair">Wheelchair accessible</option>
-        <option value="spanish">Spanish available</option>
-        <option value="asl">ASL available</option>
-        <option value="virtual">Virtual services</option>
-        <option value="hotline">Hotline</option>
-      </select>
+        // Austin
+        "austin-food": "https://www.centraltexasfoodbank.org/get-food-now",
+        "austin-housing": "https://www.austintexas.gov/page/resources-renters",
+        "austin-mental-health": "https://www.integralcare.org/services/",
+        "austin-job-centers": "https://www.wfscapitalarea.com/our-services/job-search-training/",
+        "austin-legal-aid": "https://www.vlsoct.org/",
 
-      <label for="sort" class="sr-only">Sort</label>
-      <select id="sort" name="sort" aria-label="Sort results">
-        <option value="name-asc">Name A–Z</option>
-        <option value="name-desc">Name Z–A</option>
-        <option value="updated-desc">Recently updated</option>
-      </select>
-    </form>
+        // Dallas
+        "dallas-food": "https://ntfb.org/get-help/",
+        "dallas-housing": "https://www.dallashousing.org/housing/voucher-program/",
+        "dallas-mental-health": "https://www.metrocareservices.org/get-help/",
+        "dallas-job-centers": "https://www.twc.texas.gov/find-locations/workforce-solutions-greater-dallas-0",
+        "dallas-legal-aid": "https://legalaidtx.org/get-help/how-to-apply/",
 
-    <!-- Results toolbar -->
-    <div style="display:flex;align-items:center;justify-content:space-between;margin:8px 0 12px;">
-      <div id="results-count" class="muted">0 results</div>
-      <button id="reset-filters" class="btn btn-small" type="button" aria-label="Reset filters">Reset</button>
-    </div>
+        // San Antonio
+        "san-antonio-food": "https://safoodbank.org/help/",
+        "san-antonio-housing": "https://www.sa.gov/Directory/Departments/DHS/Financial-Assistance/Utility-Assistance",
+        "san-antonio-mental-health": "https://chcsbc.org/",
+        "san-antonio-job-centers": "https://www.workforcesolutionsalamo.org/job-seekers/",
+        "san-antonio-legal-aid": "https://www.sa-lsa.org/get-help/",
 
-    <!-- Cards mount here -->
-    <div id="directory" class="card-grid" role="list" aria-live="polite"></div>
+        // Houston
+        "houston-food": "https://www.houstonfoodbank.org/find-help/",
+        "houston-housing": "https://www.housingforhouston.com/",
+        "houston-mental-health": "https://www.theharriscenter.org/Services/Get-Help-Now",
+        "houston-job-centers": "https://www.wrksolutions.com/for-individuals",
+        "houston-legal-aid": "https://lonestarlegal.org/get-help/",
 
-    <!-- Template used by js/directory.js -->
-    <template id="resource-card">
-      <article class="card" role="listitem" tabindex="0">
-        <div class="card-logo-container"></div>
-        <h3 class="card-title"></h3>
-        <p class="card-meta"></p>
-        <p class="card-desc"></p>
-        <p class="card-tags"></p>
-        <p><a class="btn btn-small" target="_blank" rel="noopener">Visit website</a></p>
-      </article>
-    </template>
-  </main>
+        // Fort Worth
+        "fort-worth-food": "https://tafb.org/find-food-main/",
+        "fort-worth-housing": "https://fwhs.org/housing-programs/housing-choice-voucher/",
+        "fort-worth-mental-health": "https://mhmrtarrant.org/mental-health-services/",
+        "fort-worth-job-centers": "https://workforcesolutions.net/",
+        "fort-worth-legal-aid": "https://texaslawhelp.org/directory/lanwt",
 
-  <footer class="site-footer">
-    <small>&copy; <span id="year"></span> Texas Resource Hub.</small>
-  </footer>
+        // El Paso
+        "el-paso-food": "https://elpasoansfightinghunger.org/need-help",
+        "el-paso-housing": "https://www.ephome.org/housing/",
+        "el-paso-mental-health": "https://emergencehealthnetwork.org/crisis/",
+        "el-paso-job-centers": "https://borderplexjobs.com/jobseekers",
+        "el-paso-legal-aid": "https://texaslawhelp.org/directory/trla",
 
-  <script src="js/app.js"></script>
-  <script src="js/directory.js"></script>
-  <script src="js/pdf-pack.js"></script>
-  <script src="js/pwa-install.js"></script>
+        // Education & Training
+        "ged-prep": "https://www.ged.com/en/",
+        "esl-classes": "https://www.weareala.org/find-classes/",
+        "job-certificates": "https://www.twc.texas.gov/jobseekers/education-and-training",
+        "college-aid": "https://studentaid.gov/",
+        "apprenticeships": "https://www.apprenticeship.gov/",
+
+        // Legal & Immigration
+        "tenant-rights": "https://texaslawhelp.org/topics/housing/tenants-rights",
+        "immigration-help": "https://www.uscis.gov/es",
+        "record-clearing": "https://texaslawhelp.org/topics/family-law/criminal-records/expunctions-and-nondisclosures",
+        "consumer-protection": "https://www.ftc.gov/consumer-advice",
+        "family-law": "https://texaslawhelp.org/topics/family-law",
+
+        // Families & Youth
+        "childcare": "https://www.childcare.texas.gov/",
+        "after-school": "https://www.bgcstx.org/find-a-club/",
+        "diaper-banks": "https://www.texasdiaperbank.org/programs/",
+        "parenting-classes": "https://www.parentingtexas.org/",
+        "youth-jobs": "https://www.doleta.gov/Youth_services/",
+
+        // Utilities & Transportation
+        "utility-bill-help": "https://www.211texas.org/",
+        "low-cost-internet": "https://www.everyoneon.org/",
+        "discount-phone": "https://www.lifelinesupport.org/",
+        "bus-passes": "https://www.megabus.com/stops/texas",
+        "gas-vouchers": "https://www.fueleconomy.gov/feg/gasprices/states/tx.shtml"
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const key = params.get('key') || '';
+      const url = LINKS[key];
+
+      const status = document.getElementById('status');
+      const fallback = document.getElementById('fallback');
+
+      if (url) {
+        // set visible fallback link
+        fallback.href = url;
+        fallback.textContent = 'open ' + url;
+        // redirect (replace so Back returns to your site)
+        window.location.replace(url);
+      } else {
+        status.innerHTML = `Sorry, we couldn't find that resource (<code>${key || 'missing key'}</code>).`;
+        fallback.href = './index.html#directory';
+        fallback.textContent = 'Back to directory';
+      }
+    })();
+  </script>
 </body>
 </html>
