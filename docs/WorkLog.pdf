@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Work Log – Texas Resource Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{font:16px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;padding:32px;color:#111}
+  h1{margin:0 0 6px} h2{margin:24px 0 10px}
+  table{border-collapse:collapse;width:100%;margin:8px 0 18px}
+  th,td{border:1px solid #bbb;padding:10px;vertical-align:top}
+  th{background:#f5f5f5;text-align:left}
+  .muted{color:#555}
+</style>
+</head>
+<body>
+  <h1>Work Log</h1>
+  <div class="muted">Project: <strong>Texas Resource Hub</strong> &nbsp;|&nbsp; Team/Chapter: __________ &nbsp;|&nbsp; School Year: 2025–2026</div>
+
+  <h2>Milestones</h2>
+  <table>
+    <thead>
+      <tr><th>Date</th><th>Milestone</th><th>Owner(s)</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>—</td><td>Theme selection & scope</td><td>—</td><td>—</td></tr>
+      <tr><td>—</td><td>Information architecture & wireframes</td><td>—</td><td>—</td></tr>
+      <tr><td>—</td><td>Directory data model (JSON fields)</td><td>—</td><td>—</td></tr>
+      <tr><td>—</td><td>Build base pages (index/resources/highlights/submit)</td><td>—</td><td>—</td></tr>
+      <tr><td>—</td><td>Accessibility checks & browser testing</td><td>—</td><td>—</td></tr>
+      <tr><td>—</td><td>Final content edits & reference page</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Daily Work</h2>
+  <table>
+    <thead>
+      <tr><th>Date</th><th>Task(s)</th><th>Time</th><th>Student(s)</th><th>Evidence</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>Links to commits / screenshots</td></tr>
+      <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Interview Prep Notes</h2>
+  <ul>
+    <li>Design choices (color, type, layout) and accessibility considerations.</li>
+    <li>Data structure and filtering logic for the Directory.</li>
+    <li>How the site matches the theme and benefits Texas communities.</li>
+  </ul>
+</body>
+</html>

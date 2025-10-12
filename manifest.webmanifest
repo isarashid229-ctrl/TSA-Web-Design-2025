@@ -1,0 +1,55 @@
+{
+  "name": "Texas Resource Hub - Mutual Aid PWA",
+  "short_name": "TX Resource Hub",
+  "description": "Offline-capable Texas resource directory with SOS Pack generator for community mutual aid",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#06b6d4",
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "lang": "en",
+  "categories": ["utilities", "social", "lifestyle"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9IiMwYjEyMjAiLz4KPHBhdGggZD0iTTQ4IDY0SDg4VjEwNEg0OFY2NFoiIGZpbGw9IiMwNmI2ZDRiIi8+CjxwYXRoIGQ9Ik0xMDQgNjRIMTQ0VjEwNEgxMDRWNjRaIiBmaWxsPSIjNjM2NmYxIi8+CjxwYXRoIGQ9Ik00OCAxMTJIOThWMTUySDQ4VjExMloiIGZpbGw9IiMwNmI2ZDRiIi8+CjxwYXRoIGQ9Ik0xMDQgMTEySDE0NFYxNTJIMTA0VjExMloiIGZpbGw9IiM2MzY2ZjEiLz4KPHN2ZyB4PSI2NCIgeT0iNjQiIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTMyIDI0SDQ4VjQwSDMyVjI0WiIgZmlsbD0iI2U3ZWNmMyIvPgo8cGF0aCBkPSJNMTYgNDBIMzJWNTZIMTZWNDBaIiBmaWxsPSIjZTdlY2YzIi8+CjxwYXRoIGQ9Ik00OCA0MEg2NFY1Nkg0OFY0MFoiIGZpbGw9IiNlN2VjZjMiLz4KPC9zdmc+Cjwvc3ZnPgo=",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iNjQiIGZpbGw9IiMwYjEyMjAiLz4KPHBhdGggZD0iTTEyOCAxNzBIMjM0VjI3NkgxMjhWMTcwWiIgZmlsbD0iIzA2YjZkNCIvPgo8cGF0aCBkPSJNMjc2IDE3MEgzODJWMjc2SDI3NlYxNzBaIiBmaWxsPSIjNjM2NmYxIi8+CjxwYXRoIGQ9Ik0xMjggMjk4SDIxOFY0MDRIMTI4VjI5OFoiIGZpbGw9IiMwNmI2ZDRiIi8+CjxwYXRoIGQ9Ik0yNzYgMjk4SDM2NlY0MDRIMjc2VjI5OFoiIGZpbGw9IiM2MzY2ZjEiLz4KPHN2ZyB4PSIxNzAiIHk9IjE3MCIgd2lkdGg9IjE3MiIgaGVpZ2h0PSIxNzIiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTg2IDY0SDEyOFYxMDZIODZWNjRaIiBmaWxsPSIjZTdlY2YzIi8+CjxwYXRoIGQ9Ik00MyAxMDZIMDg1VjE0OEg0M1YxMDZaIiBmaWxsPSIjZTdlY2YzIi8+CjxwYXRoIGQ9Ik0xMjggMTA2SDE3MFYxNDhIMTI4VjEwNloiIGZpbGw9IiNlN2VjZjMiLz4KPC9zdmc+Cjwvc3ZnPgo=",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Food Assistance",
+      "short_name": "Food",
+      "description": "Quick access to food assistance resources",
+      "url": "./resources.html?category=Food%20Assistance",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMTIiIGZpbGw9IiMwYjEyMjAiLz4KPHBhdGggZD0iTTI0IDI0SDQ4VjQ4SDI0VjI0WiIgZmlsbD0iIzA2YjZkNCIvPgo8cGF0aCBkPSJNNTIgMjRINzZWNDhINTJWMjRaIiBmaWxsPSIjNjM2NmYxIi8+CjxwYXRoIGQ9Ik0yNCA1Mkg0OFY3NkgyNFY1MloiIGZpbGw9IiMwNmI2ZDRiIi8+CjxwYXRoIGQ9Ik01MiA1Mkg3NlY3Nkg1MlY1MloiIGZpbGw9IiM2MzY2ZjEiLz4KPC9zdmc+Cg==",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "SOS Pack Generator",
+      "short_name": "SOS Pack",
+      "description": "Generate printable emergency resource packs",
+      "url": "./resources.html#sos-pack",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMTIiIGZpbGw9IiMwYjEyMjAiLz4KPHBhdGggZD0iTTI0IDI0SDQ4VjQ4SDI0VjI0WiIgZmlsbD0iI2VmNDQ0NCIvPgo8cGF0aCBkPSJNNTIgMjRINzZWNDhINTJWMjRaIiBmaWxsPSIjZWY0NDQ0Ii8+CjxwYXRoIGQ9Ik0yNCA1Mkg0OFY3NkgyNFY1MloiIGZpbGw9IiNlZjQ0NDQiLz4KPHBhdGggZD0iTTUyIDUySDc2Vjc2SDUyVjUyWiIgZmlsbD0iI2VmNDQ0NCIvPgo8L3N2Zz4K",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

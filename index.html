@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Texas Resource Hub | Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="A Texas-wide community hub with a searchable directory, quick filters, and highlights of programs that help." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#06b6d4" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="TX Resource Hub" />
+  <link rel="apple-touch-icon" href="manifest.webmanifest" />
+  <style>
+    /* Page-specific sugar */
+    .hero-words { display:inline-block; min-width:10ch }
+    .quick-grid{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+    @media (max-width:840px){.quick-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.quick-grid{grid-template-columns:1fr}}
+    .quick-card{border:1px solid var(--line);background:var(--card-grad);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .15s ease}
+    .quick-card:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.35)}
+    .quick-card h3{margin:0 0 4px}
+    .pills{display:flex;flex-wrap:wrap;gap:8px}
+    .pill-link{display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:#0b1224;text-decoration:none;color:var(--text);font-size:.92rem}
+    .pill-link:hover{background:#0f162a}
+    .letters{display:flex;flex-wrap:wrap;gap:6px}
+    .letters a{width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;border:1px solid var(--line);text-decoration:none;color:var(--muted);background:#0c1426}
+    .letters a:hover{color:var(--text);background:#0f172a}
+    .stat-row{display:grid;gap:12px;grid-template-columns:repeat(4,1fr)}
+    @media (max-width:840px){.stat-row{grid-template-columns:1fr 1fr}}
+    .stat{background:var(--card-grad);border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center}
+    .stat strong{display:block;font-size:1.5rem}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <a class="logo" href="index.html">Texas Resource Hub</a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+        <ul id="nav" class="nav">
+          <li><a href="resources.html">Directory</a></li>
+          <li><a href="highlights.html">Highlights</a></li>
+          <li><a href="submit.html">Suggest a Resource</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Find help. <span class="hero-words" id="heroWords">Food.</span></h1>
+      <p>One place to discover programs across Texas—food, housing, mental health, education, jobs, and more. Search the directory or jump in with quick filters below.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;">
+        <a class="btn" href="resources.html">Browse Directory</a>
+        <a class="btn" href="highlights.html">View Highlights</a>
+        <a class="btn" href="submit.html">Suggest a Resource</a>
+      </div>
+    </section>
+
+    <!-- QUICK FILTER CARDS -->
+    <section>
+      <h2>Start fast</h2>
+      <div class="quick-grid">
+        <a class="quick-card" href="resources.html?category=Food%20Assistance&sort=updated-desc">
+          <h3>Food Assistance</h3>
+          <p class="muted">Pantries, meals, and nutrition support statewide.</p>
+          <span class="pill">Popular</span>
+        </a>
+        <a class="quick-card" href="resources.html?category=Mental%20Health&accessibility=virtual">
+          <h3>Mental Health</h3>
+          <p class="muted">Counseling, crisis lines, and virtual support.</p>
+          <span class="pill">Telehealth</span>
+        </a>
+        <a class="quick-card" href="resources.html?category=Housing">
+          <h3>Housing</h3>
+          <p class="muted">Shelters, rent help, repairs, and mediation.</p>
+          <span class="pill">Urgent</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CITY SHORTCUTS -->
+    <section>
+      <h2>Texas cities</h2>
+      <div class="pills">
+        <a class="pill-link" href="resources.html?city=Houston">Houston</a>
+        <a class="pill-link" href="resources.html?city=Dallas">Dallas</a>
+        <a class="pill-link" href="resources.html?city=San%20Antonio">San Antonio</a>
+        <a class="pill-link" href="resources.html?city=Austin">Austin</a>
+        <a class="pill-link" href="resources.html?city=Fort%20Worth">Fort Worth</a>
+        <a class="pill-link" href="resources.html?city=El%20Paso">El Paso</a>
+      </div>
+    </section>
+
+    <!-- A–Z LETTERS -->
+    <section>
+      <h2>Browse A–Z</h2>
+      <div class="letters">
+        <a href="resources.html?initial=A">A</a><a href="resources.html?initial=B">B</a><a href="resources.html?initial=C">C</a>
+        <a href="resources.html?initial=D">D</a><a href="resources.html?initial=E">E</a><a href="resources.html?initial=F">F</a>
+        <a href="resources.html?initial=G">G</a><a href="resources.html?initial=H">H</a><a href="resources.html?initial=I">I</a>
+        <a href="resources.html?initial=J">J</a><a href="resources.html?initial=K">K</a><a href="resources.html?initial=L">L</a>
+        <a href="resources.html?initial=M">M</a><a href="resources.html?initial=N">N</a><a href="resources.html?initial=O">O</a>
+        <a href="resources.html?initial=P">P</a><a href="resources.html?initial=Q">Q</a><a href="resources.html?initial=R">R</a>
+        <a href="resources.html?initial=S">S</a><a href="resources.html?initial=T">T</a><a href="resources.html?initial=U">U</a>
+        <a href="resources.html?initial=V">V</a><a href="resources.html?initial=W">W</a><a href="resources.html?initial=X">X</a>
+        <a href="resources.html?initial=Y">Y</a><a href="resources.html?initial=Z">Z</a>
+      </div>
+    </section>
+
+    <!-- LITTLE STATS (static sample numbers for demo) -->
+    <section>
+      <h2>Why this matters</h2>
+      <div class="stat-row">
+        <div class="stat"><strong>48+</strong><span class="muted">resources listed</span></div>
+        <div class="stat"><strong>8</strong><span class="muted">core categories</span></div>
+        <div class="stat"><strong>7</strong><span class="muted">major cities covered</span></div>
+        <div class="stat"><strong>100%</strong><span class="muted">student-built</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> Texas Resource Hub. Student-created example.</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/pwa-install.js"></script>
+  <script>
+    // Rotate "hero words" for a fun, simple interaction
+    const words = ["Food.", "Housing.", "Mental Health.", "Education.", "Jobs.", "Legal Help."];
+    const slot = document.getElementById('heroWords');
+    let i = 0;
+    setInterval(()=>{ i = (i+1) % words.length; slot.textContent = words[i]; }, 1700);
+  </script>
+</body>
+</html>

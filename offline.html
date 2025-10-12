@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offline | Texas Resource Hub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="You're offline, but you can still access cached resources from the Texas Resource Hub." />
+  <style>
+    .offline-hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, rgba(6,182,212,.10), rgba(99,102,241,.10)),
+                  var(--card-grad);
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 4px);
+      margin: 40px 0;
+    }
+    .offline-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      opacity: 0.7;
+    }
+    .cached-resources {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin: 40px 0;
+    }
+    .cached-card {
+      background: var(--card-grad);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+    }
+    .cached-card h3 {
+      margin: 0 0 12px;
+      color: var(--brand);
+    }
+    .cached-card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+    .retry-btn {
+      background: var(--brand);
+      color: #061b1f;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .retry-btn:hover {
+      filter: brightness(1.1);
+    }
+    .offline-tips {
+      background: var(--card-grad);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 40px 0;
+    }
+    .offline-tips h3 {
+      margin: 0 0 16px;
+      color: var(--brand);
+    }
+    .offline-tips ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .offline-tips li {
+      margin: 8px 0;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <a class="logo" href="index.html">Texas Resource Hub</a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+        <ul id="nav" class="nav">
+          <li><a href="resources.html">Directory</a></li>
+          <li><a href="highlights.html">Highlights</a></li>
+          <li><a href="submit.html">Suggest a Resource</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="offline-hero">
+      <div class="offline-icon">📡</div>
+      <h1>You're Offline</h1>
+      <p>Don't worry! You can still access cached resources from the Texas Resource Hub.</p>
+      <button class="retry-btn" onclick="window.location.reload()">Try Again</button>
+    </div>
+
+    <section>
+      <h2>Available Offline Resources</h2>
+      <div class="cached-resources">
+        <div class="cached-card">
+          <h3>🏠 Home</h3>
+          <p>Access the main hub with quick links and city shortcuts.</p>
+          <a href="index.html" class="btn btn-small">Go to Home</a>
+        </div>
+        
+        <div class="cached-card">
+          <h3>📋 Resource Directory</h3>
+          <p>Browse cached resources by category, city, and accessibility.</p>
+          <a href="resources.html" class="btn btn-small">View Directory</a>
+        </div>
+        
+        <div class="cached-card">
+          <h3>⭐ Highlights</h3>
+          <p>Featured organizations and spotlight resources.</p>
+          <a href="highlights.html" class="btn btn-small">See Highlights</a>
+        </div>
+        
+        <div class="cached-card">
+          <h3>📚 Reference</h3>
+          <p>Official links and citations for each category.</p>
+          <a href="reference.html" class="btn btn-small">View Reference</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="offline-tips">
+      <h3>💡 Offline Tips</h3>
+      <ul>
+        <li><strong>Search still works:</strong> Use the directory filters to find specific resources</li>
+        <li><strong>Cached data:</strong> All resource information is available offline</li>
+        <li><strong>SOS Pack:</strong> Generate emergency resource packs even without internet</li>
+        <li><strong>Auto-sync:</strong> New data will sync when you're back online</li>
+        <li><strong>Install the app:</strong> Add to home screen for better offline access</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2>Emergency Resources</h2>
+      <p class="muted">Even offline, you can access critical emergency information:</p>
+      
+      <div class="cached-resources">
+        <div class="cached-card">
+          <h3>🍎 Food Assistance</h3>
+          <p>Find food pantries, meal programs, and nutrition support.</p>
+          <a href="resources.html?category=Food%20Assistance&cost=free" class="btn btn-small">Free Food Help</a>
+        </div>
+        
+        <div class="cached-card">
+          <h3>🏠 Housing Support</h3>
+          <p>Emergency shelter, rent assistance, and housing navigation.</p>
+          <a href="resources.html?category=Housing" class="btn btn-small">Housing Help</a>
+        </div>
+        
+        <div class="cached-card">
+          <h3>🧠 Mental Health</h3>
+          <p>Crisis lines, counseling, and mental health support.</p>
+          <a href="resources.html?category=Mental%20Health" class="btn btn-small">Mental Health</a>
+        </div>
+        
+        <div class="cached-card">
+          <h3>📞 Crisis Hotlines</h3>
+          <p>24/7 crisis support and emergency assistance.</p>
+          <a href="resources.html?accessibility=hotline" class="btn btn-small">Crisis Support</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> Texas Resource Hub. Works offline for community resilience.</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Check online status and update UI
+    function updateOnlineStatus() {
+      if (navigator.onLine) {
+        // If back online, redirect to home after a short delay
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 2000);
+      }
+    }
+
+    // Listen for online/offline events
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', () => {
+      console.log('Still offline');
+    });
+
+    // Check status on page load
+    updateOnlineStatus();
+
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

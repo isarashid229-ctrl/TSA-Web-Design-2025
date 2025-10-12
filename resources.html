@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Texas Resource Hub | Directory</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="Search and filter Texas-wide resources by category, cost, city, and accessibility." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#06b6d4" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="TX Resource Hub" />
+  <link rel="apple-touch-icon" href="manifest.webmanifest" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+      <a class="logo" href="index.html">Texas Resource Hub</a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+        <ul id="nav" class="nav">
+          <li><a class="active" href="resources.html">Directory</a></li>
+          <li><a href="highlights.html">Highlights</a></li>
+          <li><a href="submit.html">Suggest a Resource</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Resource Directory</h1>
+    <p class="muted">Explore programs across Texas. Search and filter by city, category, cost, and accessibility. Links open in a new tab.</p>
+
+    <!-- Filters -->
+    <form id="filters" class="filters" aria-label="Directory filters">
+      <label for="q" class="sr-only">Search</label>
+      <input id="q" name="q" type="search" placeholder="Search by name or keyword" />
+
+      <label for="category" class="sr-only">Category</label>
+      <select id="category" name="category">
+        <option value="">All categories</option>
+        <option>Food Assistance</option>
+        <option>Mental Health</option>
+        <option>Housing</option>
+        <option>Education</option>
+        <option>Legal Aid</option>
+        <option>Employment</option>
+        <option>Health</option>
+        <option>Youth</option>
+      </select>
+
+      <label for="cost" class="sr-only">Cost</label>
+      <select id="cost" name="cost">
+        <option value="">Any cost</option>
+        <option value="free">Free</option>
+        <option value="sliding">Sliding scale</option>
+        <option value="low-cost">Low-cost</option>
+        <option value="paid">Paid</option>
+      </select>
+
+      <label for="city" class="sr-only">City</label>
+      <input id="city" name="city" type="text" placeholder="City (e.g., Houston, Dallas, El Paso)" />
+
+      <label for="accessibility" class="sr-only">Accessibility</label>
+      <select id="accessibility" name="accessibility">
+        <option value="">Accessibility</option>
+        <option value="wheelchair">Wheelchair accessible</option>
+        <option value="spanish">Spanish available</option>
+        <option value="asl">ASL available</option>
+        <option value="virtual">Virtual services</option>
+        <option value="hotline">Hotline</option>
+      </select>
+
+      <label for="sort" class="sr-only">Sort</label>
+      <select id="sort" name="sort" aria-label="Sort results">
+        <option value="name-asc">Name A–Z</option>
+        <option value="name-desc">Name Z–A</option>
+        <option value="updated-desc">Recently updated</option>
+      </select>
+    </form>
+
+    <!-- Results toolbar -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin:8px 0 12px;">
+      <div id="results-count" class="muted">0 results</div>
+      <button id="reset-filters" class="btn btn-small" type="button" aria-label="Reset filters">Reset</button>
+    </div>
+
+    <!-- Cards mount here -->
+    <div id="directory" class="card-grid" role="list" aria-live="polite"></div>
+
+    <!-- Template used by js/directory.js -->
+    <template id="resource-card">
+      <article class="card" role="listitem" tabindex="0">
+        <div class="card-logo-container"></div>
+        <h3 class="card-title"></h3>
+        <p class="card-meta"></p>
+        <p class="card-desc"></p>
+        <p class="card-tags"></p>
+        <p><a class="btn btn-small" target="_blank" rel="noopener">Visit website</a></p>
+      </article>
+    </template>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> Texas Resource Hub.</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/directory.js"></script>
+  <script src="js/pdf-pack.js"></script>
+  <script src="js/pwa-install.js"></script>
+</body>
+</html>

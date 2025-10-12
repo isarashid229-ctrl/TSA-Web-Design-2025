@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Texas Resource Hub | Suggest a Resource</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="Suggest a new Texas resource to add to the directory." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#06b6d4" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="TX Resource Hub" />
+  <link rel="apple-touch-icon" href="manifest.webmanifest" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+      <a class="logo" href="index.html">Texas Resource Hub</a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+        <ul id="nav" class="nav">
+          <li><a href="resources.html">Directory</a></li>
+          <li><a href="highlights.html">Highlights</a></li>
+          <li><a class="active" href="submit.html">Suggest a Resource</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Suggest a Resource</h1>
+    <p class="muted">Know an organization we should include? Share it here. We review submissions weekly; verified organizations are added to the directory.</p>
+
+    <form id="suggest" class="spotlight" aria-label="Suggest a resource">
+      <label>Organization name
+        <input name="name" required />
+      </label>
+      <br/>
+      <label>Official website
+        <input name="url" type="url" placeholder="https://example.org" required />
+      </label>
+      <br/>
+      <label>City
+        <input name="city" placeholder="City, TX" />
+      </label>
+      <br/>
+      <label>Category
+        <select name="category" required>
+          <option value="">Select a category</option>
+          <option>Food Assistance</option>
+          <option>Mental Health</option>
+          <option>Housing</option>
+          <option>Education</option>
+          <option>Legal Aid</option>
+          <option>Employment</option>
+          <option>Health</option>
+          <option>Youth</option>
+        </select>
+      </label>
+      <br/>
+      <label>Short description (what they do, who they help)
+        <input name="desc" maxlength="240" />
+      </label>
+      <br/>
+      <label>Accessibility (optional)
+        <input name="access" placeholder="e.g., wheelchair; spanish; virtual" />
+      </label>
+      <br/>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+
+    <div id="thanks" class="muted" style="display:none;margin-top:12px;">Thanks for the suggestion! We’ll review it soon.</div>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> Texas Resource Hub.</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/pwa-install.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Texas Resource Hub | Highlights</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="Spotlights on Texas organizations making a difference—stories, impact, and how to get involved." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#06b6d4" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="TX Resource Hub" />
+  <link rel="apple-touch-icon" href="manifest.webmanifest" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+      <a class="logo" href="index.html">Texas Resource Hub</a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+        <ul id="nav" class="nav">
+          <li><a href="resources.html">Directory</a></li>
+          <li><a class="active" href="highlights.html">Highlights</a></li>
+          <li><a href="submit.html">Suggest a Resource</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Spotlights</h1>
+    <p class="muted">Featured organizations that show what Texas community support looks like.</p>
+
+    <div class="grid-2" id="spotlights">
+      <!-- Content will be populated by JavaScript -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> Texas Resource Hub.</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/pwa-install.js"></script>
+  <script>
+    // Load and display spotlight resources
+    (async function loadHighlights() {
+      try {
+        const response = await fetch('data/resources.json');
+        const resources = await response.json();
+        
+        // Select 6 diverse resources for highlights (most recently updated)
+        const highlights = resources
+          .sort((a, b) => new Date(b.updated) - new Date(a.updated))
+          .slice(0, 6);
+        
+        const spotlightsEl = document.getElementById('spotlights');
+        spotlightsEl.innerHTML = highlights.map(r => {
+          const name = r.name || 'Untitled';
+          const titleHtml = r.url && r.url !== '#' 
+            ? `<a class="spotlight-link" href="${r.url}" target="_blank" rel="noopener noreferrer nofollow" aria-label="Open ${name} website">${name}</a>`
+            : name;
+          
+          const logoHtml = r.logo && r.logo.trim() 
+            ? `<img class="spotlight-logo" src="${r.logo}" alt="${name} logo" loading="lazy" decoding="async" width="80" height="80">`
+            : '';
+          
+          return `
+            <article class="spotlight" tabindex="0">
+              ${logoHtml}
+              <h2>${titleHtml}</h2>
+              <p class="muted">${r.category} • ${r.cost} • ${r.city}</p>
+              <p>${r.description}</p>
+              <p>This organization demonstrates the power of community support and provides essential services to Texans in need.</p>
+              <p>Ready to learn more? Visit their website to see how you can get involved or access their services.</p>
+              ${r.url && r.url !== '#' 
+                ? `<p><a class="btn" href="${r.url}" target="_blank" rel="noopener noreferrer nofollow" aria-label="Visit ${name} website">Learn more</a></p>`
+                : ''
+              }
+            </article>
+          `;
+        }).join('');
+        
+        // Add delegated click handler for spotlight cards
+        spotlightsEl.addEventListener('click', (ev) => {
+          const spotlight = ev.target.closest('.spotlight');
+          if (!spotlight) return;
+          
+          const link = spotlight.querySelector('.spotlight-link');
+          const interactive = ev.target.closest('a, button, select, input, textarea, label');
+          
+          if (link && !interactive) {
+            link.click();
+          }
+        });
+        
+        // Keyboard support for spotlight navigation
+        spotlightsEl.addEventListener('keydown', (ev) => {
+          if (ev.key === 'Enter') {
+            const spotlight = ev.target.closest('.spotlight');
+            if (!spotlight) return;
+            
+            const link = spotlight.querySelector('.spotlight-link');
+            if (link) {
+              link.click();
+            }
+          }
+        });
+        
+      } catch (error) {
+        console.error('Failed to load highlights:', error);
+        document.getElementById('spotlights').innerHTML = `
+          <article class="spotlight">
+            <h2>Could not load highlights</h2>
+            <p>Please check your connection and try again.</p>
+          </article>
+        `;
+      }
+    })();
+  </script>
+</body>
+</html>

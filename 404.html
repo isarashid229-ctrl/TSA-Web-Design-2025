@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Not Found | Texas Resource Hub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="The page you're looking for doesn't exist. Return to the Texas Resource Hub." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <a class="logo" href="./index.html">Texas Resource Hub</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero" style="text-align: center; padding: 60px 20px;">
+      <h1>404 - Page Not Found</h1>
+      <p>The page you're looking for doesn't exist or has been moved.</p>
+      <p><a class="btn" href="./index.html">Return to Home</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> Texas Resource Hub.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

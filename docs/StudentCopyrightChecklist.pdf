@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Student Copyright Checklist – Texas Resource Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{font:16px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;padding:32px;color:#111}
+  h1{margin:0 0 6px} h2{margin:28px 0 10px}
+  .muted{color:#555}
+  table{border-collapse:collapse;width:100%;margin:8px 0 18px}
+  th,td{border:1px solid #bbb;padding:10px;vertical-align:top}
+  th{background:#f5f5f5;text-align:left}
+  .sig{margin-top:22px}
+  .box{border:1px solid #bbb;padding:12px;border-radius:8px;background:#fafafa}
+</style>
+</head>
+<body>
+  <h1>Student Copyright Checklist</h1>
+  <div class="muted">Project: <strong>Texas Resource Hub</strong> &nbsp;|&nbsp; Team/Chapter: __________ &nbsp;|&nbsp; School Year: 2025–2026</div>
+
+  <h2>Original Work</h2>
+  <div class="box">
+    <p>✅ All HTML, CSS, and JavaScript were created by the student team during the current school year.</p>
+    <p>✅ No pre-built website templates or themes were used.</p>
+  </div>
+
+  <h2>Third-Party Assets Used (if any)</h2>
+  <table>
+    <thead>
+      <tr><th>Asset (image, icon, font, etc.)</th><th>Source / URL</th><th>License or Permission</th><th>How credited</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Text Sources</h2>
+  <p>Descriptions of community organizations were summarized in the team’s own words using information from each organization’s official website. Specific sources are listed on the site’s <em>Reference</em> page.</p>
+
+  <h2>Attribution</h2>
+  <p>Credits and attributions are posted on <strong>reference.html</strong>. If a license requires a specific attribution format (e.g., Creative Commons), the exact text is included there.</p>
+
+  <h2>Declaration</h2>
+  <p>We certify that this work complies with the TSA Honor Statement and applicable copyright laws.</p>
+  <div class="sig">
+    Student Signature: ________________________________ &nbsp;&nbsp; Date: ____________<br>
+    Advisor Signature: ________________________________ &nbsp;&nbsp; Date: ____________
+  </div>
+</body>
+</html>
+
