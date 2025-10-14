@@ -1,18 +1,1 @@
-// Footer year
-document.getElementById('year')?.appendChild(document.createTextNode(new Date().getFullYear()));
-
-// Mobile nav toggle
-const toggle = document.querySelector('.nav-toggle');
-const nav = document.getElementById('nav');
-toggle?.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', String(isOpen));
-});
-
-// Service Worker registration
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js', { scope: './' })
-      .catch(err => console.warn('SW register failed:', err));
-  });
-}
+const navToggle=document.querySelector('.nav-toggle');const nav=document.querySelector('.nav');navToggle?.addEventListener('click',()=>nav.classList.toggle('open'));document.querySelectorAll('[data-scroll]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id&&id.startsWith('#')){e.preventDefault();const el=document.querySelector(id);if(el){window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-72,behavior:'smooth'});nav?.classList.remove('open');}}}));let deferredPrompt;const installBtn=document.getElementById('installBtn');window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;if(installBtn) installBtn.hidden=false;});installBtn?.addEventListener('click',async()=>{if(!deferredPrompt) return;deferredPrompt.prompt();await deferredPrompt.userChoice;installBtn.hidden=true;deferredPrompt=null;});if('serviceWorker'in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('service-worker.js').catch(()=>{}));}
