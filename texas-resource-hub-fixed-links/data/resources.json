@@ -1,0 +1,804 @@
+[
+  {
+    "name": "988 Línea de Vida (en Español)",
+    "url": "https://988lifeline.org/help-yourself/en-espanol/",
+    "description": "Ayuda de salud mental y prevención del suicidio 24/7 en español.",
+    "category": "Mental Health",
+    "city": "Statewide",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish",
+      "24-7"
+    ],
+    "tags": [
+      "spanish",
+      "hotline"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Línea Nacional Contra la Violencia Doméstica",
+    "url": "https://espanol.thehotline.org/",
+    "description": "Apoyo confidencial 24/7 para violencia doméstica, chat y llamada.",
+    "category": "Families & Youth",
+    "city": "Statewide",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish",
+      "24-7"
+    ],
+    "tags": [
+      "spanish",
+      "hotline"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "211 Texas — Español",
+    "url": "https://www.211texas.org/",
+    "description": "Busque clínicas, alimentos, vivienda y más en todo Texas.",
+    "category": "Directory",
+    "city": "Statewide",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "spanish",
+      "directory"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas Law Help — Español",
+    "url": "https://texaslawhelp.org/es",
+    "description": "Información legal gratuita en español: vivienda, familia, inmigración.",
+    "category": "Legal",
+    "city": "Statewide",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "legal",
+      "spanish"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "HRSA — Centros de Salud",
+    "url": "https://findahealthcenter.hrsa.gov/",
+    "description": "Buscador oficial de clínicas de bajo costo/costo reducido (FQHC).",
+    "category": "Health",
+    "city": "Statewide",
+    "cost": "Low-cost",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "clinics",
+      "spanish"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Central Texas Food Bank",
+    "url": "https://www.centraltexasfoodbank.org/",
+    "description": "Encuentre despensas y horarios en Austin/Central Texas.",
+    "category": "Food",
+    "city": "Austin",
+    "cost": "Free",
+    "tags": [
+      "foodbank",
+      "austin"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Houston Food Bank",
+    "url": "https://www.houstonfoodbank.org/",
+    "description": "Ubicaciones de despensas y asistencia alimentaria en Houston.",
+    "category": "Food",
+    "city": "Houston",
+    "cost": "Free",
+    "tags": [
+      "foodbank",
+      "houston"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "North Texas Food Bank",
+    "url": "https://www.ntfb.org/",
+    "description": "Asistencia alimentaria en Dallas y norte de Texas.",
+    "category": "Food",
+    "city": "Dallas",
+    "cost": "Free",
+    "tags": [
+      "foodbank",
+      "dallas"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "San Antonio Food Bank",
+    "url": "https://safoodbank.org/",
+    "description": "Ayuda alimentaria y programas en San Antonio.",
+    "category": "Food",
+    "city": "San Antonio",
+    "cost": "Free",
+    "tags": [
+      "foodbank",
+      "san antonio"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "El Pasoans Fighting Hunger",
+    "url": "https://www.elpasoansfightinghunger.org/",
+    "description": "Banco de alimentos en El Paso y condados cercanos.",
+    "category": "Food",
+    "city": "El Paso",
+    "cost": "Free",
+    "tags": [
+      "foodbank",
+      "el paso"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Your Texas Benefits (SNAP, Medicaid, TANF)",
+    "url": "https://www.yourtexasbenefits.com/",
+    "description": "Solicite beneficios estatales: SNAP, Medicaid/CHIP, TANF.",
+    "category": "Food",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "snap",
+      "medicaid"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas WIC",
+    "url": "https://texaswic.org/",
+    "description": "Nutrición para mujeres, bebés y niños; encuentre clínicas WIC.",
+    "category": "Food",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "wic"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Medicaid & CHIP — Texas HHS",
+    "url": "https://www.hhs.texas.gov/services/health/medicaid-chip",
+    "description": "Información oficial de Medicaid y CHIP en Texas.",
+    "category": "Health",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "medicaid",
+      "chip"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "MentalHealthTX.org",
+    "url": "https://mentalhealthtx.org/",
+    "description": "Recursos de salud mental para Texas: líneas locales, ayuda.",
+    "category": "Mental Health",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "mental health"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "NAMI Texas",
+    "url": "https://namitexas.org/",
+    "description": "Grupos de apoyo, educación y recursos de salud mental.",
+    "category": "Mental Health",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "nami"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Crisis Center Locator (HHSC)",
+    "url": "https://www.hhs.texas.gov/services/mental-health-substance-use/mental-health-crisis-services",
+    "description": "Encuentre su centro local de crisis de salud mental en Texas.",
+    "category": "Mental Health",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "crisis"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "HUD Texas — Housing Resources",
+    "url": "https://www.hud.gov/states/texas",
+    "description": "Programas de vivienda, consejería y alquiler subsidiado.",
+    "category": "Housing",
+    "city": "Statewide",
+    "cost": "Low-cost",
+    "tags": [
+      "hud",
+      "housing"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "TSAHC — Homeownership & Help",
+    "url": "https://www.tsahc.org/",
+    "description": "Ayuda para compradores de vivienda y asistencia hipoteca.",
+    "category": "Housing",
+    "city": "Statewide",
+    "cost": "Low-cost",
+    "tags": [
+      "housing"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Caritas of Austin — Housing & Services",
+    "url": "https://caritasofaustin.org/",
+    "description": "Apoyo integral de vivienda en Austin.",
+    "category": "Housing",
+    "city": "Austin",
+    "cost": "Free",
+    "tags": [
+      "austin",
+      "housing"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Housing Forward Fort Worth",
+    "url": "https://housingforwardfw.org/",
+    "description": "Recursos de vivienda y prevención de falta de hogar.",
+    "category": "Housing",
+    "city": "Fort Worth",
+    "cost": "Free",
+    "tags": [
+      "fort worth"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Harris County Housing Authority",
+    "url": "https://hchatexas.org/",
+    "description": "Programas de vivienda en el área de Houston/Harris County.",
+    "category": "Housing",
+    "city": "Houston",
+    "cost": "Low-cost",
+    "tags": [
+      "houston",
+      "housing"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Opportunity Home San Antonio",
+    "url": "https://www.opportunityhomesatx.org/",
+    "description": "Vivienda y vales en San Antonio.",
+    "category": "Housing",
+    "city": "San Antonio",
+    "cost": "Low-cost",
+    "tags": [
+      "san antonio"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "El Paso Housing Authority",
+    "url": "https://www.hacep.org/",
+    "description": "Vivienda pública y programas en El Paso.",
+    "category": "Housing",
+    "city": "El Paso",
+    "cost": "Low-cost",
+    "tags": [
+      "el paso"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas Law Help",
+    "url": "https://texaslawhelp.org/",
+    "description": "Guías legales gratuitas en inglés/español.",
+    "category": "Legal",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "legal"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Lone Star Legal Aid",
+    "url": "https://lonestarlegal.org/",
+    "description": "Asistencia legal civil gratuita (este y sureste de Texas).",
+    "category": "Legal",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "legal aid"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas RioGrande Legal Aid",
+    "url": "https://www.trla.org/",
+    "description": "Ayuda legal civil gratuita en el sur y oeste de Texas.",
+    "category": "Legal",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "legal aid"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Disability Rights Texas",
+    "url": "https://disabilityrightstx.org/",
+    "description": "Protección de derechos para personas con discapacidades.",
+    "category": "Legal",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "disability"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Immigration Advocates Directory",
+    "url": "https://www.immigrationadvocates.org/nonprofit/legaldirectory/",
+    "description": "Buscador de servicios legales de inmigración sin fines de lucro.",
+    "category": "Legal",
+    "city": "Statewide",
+    "cost": "Low-cost",
+    "tags": [
+      "immigration"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas AG — Consumer Protection",
+    "url": "https://www.texasattorneygeneral.gov/consumer-protection",
+    "description": "Presentar quejas de consumidores y estafas.",
+    "category": "Legal",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "consumer"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "WorkInTexas.com",
+    "url": "https://www.workintexas.com/",
+    "description": "Bolsa de trabajo oficial del estado de Texas.",
+    "category": "Jobs",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "jobs"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas Workforce Commission",
+    "url": "https://www.twc.texas.gov/",
+    "description": "Servicios laborales, capacitación y beneficios de desempleo.",
+    "category": "Jobs",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "twc"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Workforce Solutions — Houston Area",
+    "url": "https://www.wrksolutions.com/",
+    "description": "Centros de empleo y capacitación en la región de Houston.",
+    "category": "Jobs",
+    "city": "Houston",
+    "cost": "Free",
+    "tags": [
+      "jobs",
+      "houston"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "City of Austin — Jobs",
+    "url": "https://www.austintexas.gov/department/human-resources/careers",
+    "description": "Empleos municipales y programas locales.",
+    "category": "Jobs",
+    "city": "Austin",
+    "cost": "Free",
+    "tags": [
+      "austin",
+      "jobs"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Goodwill Central Texas — Job Training",
+    "url": "https://www.goodwillcentraltexas.org/",
+    "description": "Capacitación laboral y apoyo educativo.",
+    "category": "Jobs",
+    "city": "Austin",
+    "cost": "Free",
+    "tags": [
+      "training"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "SA Works (San Antonio)",
+    "url": "https://www.sanantonio.gov/Economic-Development/Initiatives/SA-Works",
+    "description": "Conexión con empleos y pasantías juveniles.",
+    "category": "Jobs",
+    "city": "San Antonio",
+    "cost": "Free",
+    "tags": [
+      "san antonio"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Workforce Solutions for Tarrant County",
+    "url": "https://workforcesolutions.net/",
+    "description": "Búsqueda de empleo y capacitación (Fort Worth).",
+    "category": "Jobs",
+    "city": "Fort Worth",
+    "cost": "Free",
+    "tags": [
+      "fort worth"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Workforce Solutions Borderplex",
+    "url": "https://www.borderplexjobs.com/",
+    "description": "Empleo y capacitación para El Paso y región Borderplex.",
+    "category": "Jobs",
+    "city": "El Paso",
+    "cost": "Free",
+    "tags": [
+      "el paso"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "TDHCA — Energy Assistance (CEAP)",
+    "url": "https://www.tdhca.state.tx.us/community-affairs/ceap/index.htm",
+    "description": "Ayuda con facturas de energía para hogares de bajos ingresos.",
+    "category": "Utilities",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "utilities",
+      "energy"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Lifeline — Discount Phone/Internet",
+    "url": "https://www.lifelinesupport.org/",
+    "description": "Descuentos federales en servicio telefónico e internet.",
+    "category": "Utilities",
+    "city": "Statewide",
+    "cost": "Low-cost",
+    "tags": [
+      "phone",
+      "internet"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Spectrum Internet Assist",
+    "url": "https://www.spectrum.com/internet/spectrum-internet-assist",
+    "description": "Plan de internet de bajo costo si cumple requisitos.",
+    "category": "Utilities",
+    "city": "Statewide",
+    "cost": "Low-cost",
+    "tags": [
+      "internet"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Xfinity Internet Essentials",
+    "url": "https://www.internetessentials.com/",
+    "description": "Internet de bajo costo con dispositivos y clases digitales.",
+    "category": "Utilities",
+    "city": "Statewide",
+    "cost": "Low-cost",
+    "tags": [
+      "internet"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "CapMetro (Austin)",
+    "url": "https://www.capmetro.org/",
+    "description": "Rutas, tarifas, pases y MetroAccess en Austin.",
+    "category": "Transportation",
+    "city": "Austin",
+    "cost": "Low-cost",
+    "tags": [
+      "transit",
+      "austin"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "DART (Dallas)",
+    "url": "https://www.dart.org/",
+    "description": "Rutas, tren ligero y GoPass en área de Dallas.",
+    "category": "Transportation",
+    "city": "Dallas",
+    "cost": "Low-cost",
+    "tags": [
+      "transit",
+      "dallas"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "VIA (San Antonio)",
+    "url": "https://www.viainfo.net/",
+    "description": "Rutas y pases de autobús en San Antonio.",
+    "category": "Transportation",
+    "city": "San Antonio",
+    "cost": "Low-cost",
+    "tags": [
+      "transit",
+      "san antonio"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "METRO (Houston)",
+    "url": "https://www.ridemetro.org/",
+    "description": "Rutas, METRORail y METROLift en Houston.",
+    "category": "Transportation",
+    "city": "Houston",
+    "cost": "Low-cost",
+    "tags": [
+      "transit",
+      "houston"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Sun Metro (El Paso)",
+    "url": "https://www.sunmetro.net/",
+    "description": "Autobuses y servicios de paratránsito en El Paso.",
+    "category": "Transportation",
+    "city": "El Paso",
+    "cost": "Low-cost",
+    "tags": [
+      "transit",
+      "el paso"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas Child Care Solutions",
+    "url": "https://texaschildcaresolutions.org/",
+    "description": "Encuentre cuidado infantil, ayuda para pagar y recursos.",
+    "category": "Families & Youth",
+    "city": "Statewide",
+    "cost": "Low-cost",
+    "tags": [
+      "childcare"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas Diaper Bank",
+    "url": "https://texasdiaperbank.org/",
+    "description": "Pañales y productos de higiene para familias.",
+    "category": "Families & Youth",
+    "city": "San Antonio",
+    "cost": "Free",
+    "tags": [
+      "diapers"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Boys & Girls Clubs in Texas",
+    "url": "https://www.bgca.org/get-involved/find-a-club",
+    "description": "Busque un Club de Niños y Niñas cercano.",
+    "category": "Families & Youth",
+    "city": "Statewide",
+    "cost": "Low-cost",
+    "tags": [
+      "youth"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "YMCA of Greater Houston",
+    "url": "https://ymcahouston.org/",
+    "description": "Programas juveniles, guarderías y deportes.",
+    "category": "Families & Youth",
+    "city": "Houston",
+    "cost": "Low-cost",
+    "tags": [
+      "youth",
+      "houston"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "City of Dallas — After School",
+    "url": "https://dallascityhall.com/departments/park-and-recreation/Pages/youth-programs.aspx",
+    "description": "Programas después de clases y campamentos.",
+    "category": "Families & Youth",
+    "city": "Dallas",
+    "cost": "Low-cost",
+    "tags": [
+      "dallas",
+      "youth"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas GED — Adult Education (TWC)",
+    "url": "https://www.twc.texas.gov/programs/adult-education-and-literacy-program-overview",
+    "description": "Educación para adultos, GED, ESL en todo el estado.",
+    "category": "Education",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "ged",
+      "esl"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Literacy Coalition of Central Texas",
+    "url": "https://willread.org/",
+    "description": "ESL, GED y preparación laboral (Austin/Central TX).",
+    "category": "Education",
+    "city": "Austin",
+    "cost": "Free",
+    "tags": [
+      "esl",
+      "ged"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas OnCourse — College & Careers",
+    "url": "https://texasoncourse.org/",
+    "description": "Planificación de universidad y carreras para estudiantes de TX.",
+    "category": "Education",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "college"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Apprenticeship Finder (U.S. DOL)",
+    "url": "https://www.apprenticeship.gov/apprenticeship-job-finder",
+    "description": "Busque programas de aprendizaje en Texas y EE. UU.",
+    "category": "Education",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "apprenticeship"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "findhelp (Aunt Bertha) — Texas",
+    "url": "https://www.findhelp.org/",
+    "description": "Busque alimentos, vivienda y más por código postal.",
+    "category": "Directory",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "directory"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "211 Texas",
+    "url": "https://www.211texas.org/",
+    "description": "Búsqueda de recursos y línea 24/7 (marque 2-1-1).",
+    "category": "Directory",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "directory",
+      "24-7"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "United Way Texas",
+    "url": "https://www.unitedway.org/local/united-states/texas",
+    "description": "Red de United Way en Texas: programas y ayuda local.",
+    "category": "Directory",
+    "city": "Statewide",
+    "cost": "Free",
+    "tags": [
+      "directory"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Austin Public Health",
+    "url": "https://www.austintexas.gov/department/health",
+    "description": "Clínicas y servicios de salud pública en Austin.",
+    "category": "Health",
+    "city": "Austin",
+    "cost": "Low-cost",
+    "tags": [
+      "clinic"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Dallas County Health & Human Services",
+    "url": "https://www.dallascounty.org/departments/dchhs/",
+    "description": "Salud pública, clínicas y vacunas en Dallas County.",
+    "category": "Health",
+    "city": "Dallas",
+    "cost": "Low-cost",
+    "tags": [
+      "clinic"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "San Antonio Metropolitan Health District",
+    "url": "https://www.sanantonio.gov/health",
+    "description": "Clínicas de salud y programas locales.",
+    "category": "Health",
+    "city": "San Antonio",
+    "cost": "Low-cost",
+    "tags": [
+      "clinic"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Harris County Public Health",
+    "url": "https://publichealth.harriscountytx.gov/",
+    "description": "Salud pública y clínicas en el área de Houston.",
+    "category": "Health",
+    "city": "Houston",
+    "cost": "Low-cost",
+    "tags": [
+      "clinic"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "El Paso Department of Public Health",
+    "url": "https://www.elpasotexas.gov/health-services/public-health/",
+    "description": "Salud pública y clínicas en El Paso.",
+    "category": "Health",
+    "city": "El Paso",
+    "cost": "Low-cost",
+    "tags": [
+      "clinic"
+    ],
+    "updated": "2025-10-15"
+  }
+]

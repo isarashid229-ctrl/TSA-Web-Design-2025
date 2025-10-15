@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Texas Resource Hub</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="img/pwa-192.png">
+  <meta name="theme-color" content="#111111">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <a class="logo" href="#top">Texas Resource Hub</a>
+      <nav>
+        <button class="nav-toggle" aria-label="Open navigation">☰</button>
+        <ul class="nav">
+          <li><a data-scroll href="#directory">Directory</a></li>
+          <li><a data-scroll href="#highlights">Highlights</a></li>
+          <li><a data-scroll href="#why">Why this matters</a></li>
+          <li><a data-scroll href="#suggest">Suggest</a></li>
+          <li><a data-scroll href="#reference">Reference</a></li>
+          <li><a id="install-btn" href="#" class="btn btn-ghost" style="display:none">Install app</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-left">
+        <h1>Find help. Jobs.</h1>
+        <p>Quick, credible links to food, housing, mental health, legal help, jobs, and more across Texas.</p>
+        <div class="buttons">
+          <a class="btn" data-scroll href="#directory">Browse directory</a>
+          <a class="btn" data-scroll href="#why">How it works</a>
+          <a class="btn btn-red" data-scroll href="#sos">SOS pack</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="spark"></div>
+      </div>
+    </section>
+
+    <section id="sos" class="container">
+      <div class="spotlight spotlight-red">
+        <div>
+          <h2>🚨 SOS pack (printable)</h2>
+          <p>Download a one-page checklist for power or internet outages. Lists numbers, steps, and offline tips.</p>
+        </div>
+        <a class="btn btn-red" href="docs/sos-pack.pdf" target="_blank" rel="noopener">Download SOS pack</a>
+      </div>
+    </section>
+
+    <section id="highlights" class="container">
+      <h2>Start fast</h2>
+      <ul class="card-grid">
+        <li class="card">
+          <h3 class="card-title"><a data-scroll href="#directory">Food Assistance</a></h3>
+          <p class="card-desc">Food banks, pantries, and benefits.</p>
+        </li>
+        <li class="card">
+          <h3 class="card-title"><a data-scroll href="#directory">Mental Health</a></h3>
+          <p class="card-desc">988 Lifeline, NAMI Texas, crisis services.</p>
+        </li>
+        <li class="card">
+          <h3 class="card-title"><a data-scroll href="#directory">Housing</a></h3>
+          <p class="card-desc">Shelters, HUD listings, repairs.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="why" class="container">
+      <h2>Why this matters</h2>
+      <div class="why-grid">
+        <article class="why-card"><h3>Simple & fast</h3><p>Curated, official links—find help in minutes, not hours.</p></article>
+        <article class="why-card"><h3>Trusted sources</h3><p>We favor .gov, .org, and statewide programs with clear info.</p></article>
+        <article class="why-card"><h3>Works offline</h3><p>Install the app and save the SOS pack for outages.</p></article>
+      </div>
+    </section>
+
+    <section id="directory" class="container">
+      <div class="dir-head">
+        <h2>Browse the directory</h2>
+        <div id="results-count" class="muted"></div>
+      </div>
+      <form id="filters" class="filters" autocomplete="off">
+        <input name="q" type="search" placeholder="Search resources…">
+        <select name="category">
+          <option value="">Category</option>
+          <option>Food</option><option>Housing</option><option>Mental Health</option><option>Jobs</option><option>Legal</option><option>Education</option><option>Utilities</option><option>Transportation</option><option>Families & Youth</option><option>Health</option><option>Directory</option>
+        </select>
+        <select name="city">
+          <option value="">Region / City</option>
+          <option>Statewide</option><option>Austin</option><option>Dallas</option><option>San Antonio</option><option>Houston</option><option>Fort Worth</option><option>El Paso</option>
+        </select>
+        <select name="cost">
+          <option value="">Cost</option><option>Free</option><option>Low-cost</option>
+        </select>
+        <select name="accessibility">
+          <option value="">Access</option><option>Spanish</option><option>24-7</option><option>Telehealth</option>
+        </select>
+        <select name="sort">
+          <option value="name-asc">Sort A–Z</option>
+          <option value="name-desc">Sort Z–A</option>
+          <option value="city-asc">City A–Z</option>
+          <option value="updated-desc">Recently updated</option>
+        </select>
+        <button id="reset-filters" class="btn btn-ghost" type="button">Reset</button>
+      </form>
+
+      <div class="az">
+        <button data-initial="" class="chip chip-dark">All</button>
+        <button data-initial="A" class="chip">A</button><button data-initial="B" class="chip">B</button><button data-initial="C" class="chip">C</button>
+        <button data-initial="D" class="chip">D</button><button data-initial="E" class="chip">E</button><button data-initial="F" class="chip">F</button>
+        <button data-initial="G" class="chip">G</button><button data-initial="H" class="chip">H</button><button data-initial="I" class="chip">I</button>
+        <button data-initial="J" class="chip">J</button><button data-initial="K" class="chip">K</button><button data-initial="L" class="chip">L</button>
+        <button data-initial="M" class="chip">M</button><button data-initial="N" class="chip">N</button><button data-initial="O" class="chip">O</button>
+        <button data-initial="P" class="chip">P</button><button data-initial="Q" class="chip">Q</button><button data-initial="R" class="chip">R</button>
+        <button data-initial="S" class="chip">S</button><button data-initial="T" class="chip">T</button><button data-initial="U" class="chip">U</button>
+        <button data-initial="V" class="chip">V</button><button data-initial="W" class="chip">W</button><button data-initial="X" class="chip">X</button>
+        <button data-initial="Y" class="chip">Y</button><button data-initial="Z" class="chip">Z</button>
+      </div>
+
+      <div id="active-filters" class="active-pills"></div>
+      <section id="directory-results" class="card-grid"></section>
+    </section>
+
+    <section id="suggest" class="container">
+      <h2>Suggest a resource</h2>
+      <p class="muted">Know a great program that should be listed? Email: <a href="mailto:Texas.Web.D@gmail.com">Texas.Web.D@gmail.com</a></p>
+    </section>
+
+    <section id="reference" class="container">
+      <h2>Reference</h2>
+      <details class="accordion" open><summary>Eligibility rules</summary><p>We link to official eligibility pages (income, docs, residency).</p></details>
+      <details class="accordion"><summary>Data sources</summary><p>Texas HHS, TWC, HUD, 988, NAMI TX, TSAHC, local agencies.</p></details>
+      <details class="accordion"><summary>Quality checks</summary><p>We spot‑check links and prefer pages with phone, address, how‑to‑apply.</p></details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Texas Resource Hub • Works offline • <a href="#top" data-scroll>Back to top</a></div>
+  </footer>
+
+  <template id="resource-card">
+    <article class="card fade-in" tabindex="0">
+      <div class="card-logo-container"><div class="placeholder-logo">TX</div></div>
+      <h3 class="card-title"></h3>
+      <p class="card-meta"></p>
+      <p class="card-desc"></p>
+      <p class="card-tags"></p>
+      <a class="btn" target="_blank" rel="noopener">Visit site</a>
+    </article>
+  </template>
+
+  <script src="js/app.js"></script>
+  <script src="js/directory.js"></script>
+</body>
+</html>
