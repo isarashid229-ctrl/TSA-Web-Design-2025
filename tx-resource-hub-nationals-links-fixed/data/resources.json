@@ -1,0 +1,965 @@
+[
+  {
+    "name": "988 Suicide & Crisis Lifeline",
+    "description": "Call, text, or chat for 24/7 emotional support.",
+    "url": "https://988lifeline.org/",
+    "city": "Statewide",
+    "category": "Emergencies",
+    "cost": "Free",
+    "accessibility": [
+      "24-7",
+      "Spanish"
+    ],
+    "tags": [
+      "hotline",
+      "mental-health"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Ready.gov — Build a Kit",
+    "description": "What to pack and how to prepare for disasters.",
+    "url": "https://www.ready.gov/kit",
+    "city": "Statewide",
+    "category": "Emergencies",
+    "cost": "Free",
+    "accessibility": [],
+    "tags": [
+      "sos",
+      "planning"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "American Red Cross — Texas",
+    "description": "Shelters, disaster relief, and preparedness.",
+    "url": "https://www.redcross.org/local/texas.html",
+    "city": "Statewide",
+    "category": "Emergencies",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "shelter",
+      "disaster"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "FEMA — Disaster Assistance",
+    "description": "Apply for federal disaster assistance.",
+    "url": "https://www.disasterassistance.gov/",
+    "city": "Statewide",
+    "category": "Emergencies",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "fema",
+      "aid"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas Division of Emergency Management (TDEM)",
+    "description": "Statewide disaster updates and resources.",
+    "url": "https://tdem.texas.gov/",
+    "city": "Statewide",
+    "category": "Emergencies",
+    "cost": "Free",
+    "accessibility": [],
+    "tags": [
+      "state",
+      "alerts"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "PoisonHelp.org — Poison Control",
+    "description": "24/7 poison help at 1-800-222-1222 and online tools.",
+    "url": "https://www.poisonhelp.org/help",
+    "city": "Statewide",
+    "category": "Emergencies",
+    "cost": "Free",
+    "accessibility": [
+      "24-7"
+    ],
+    "tags": [
+      "health",
+      "hotline"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "The Hotline — Domestic Violence",
+    "description": "24/7 confidential support and safety planning.",
+    "url": "https://www.thehotline.org/",
+    "city": "Statewide",
+    "category": "Emergencies",
+    "cost": "Free",
+    "accessibility": [
+      "24-7",
+      "Spanish"
+    ],
+    "tags": [
+      "safety",
+      "hotline"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "211 Texas — Disaster & Local Help",
+    "description": "Find local shelters, food, and emergency programs.",
+    "url": "https://www.211texas.org/",
+    "city": "Statewide",
+    "category": "Emergencies",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "directory",
+      "multi-service"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "211 Texas",
+    "description": "Search thousands of local programs statewide.",
+    "url": "https://www.211texas.org/",
+    "city": "Statewide",
+    "category": "Multi-service",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "directory"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "FindHelp.org",
+    "description": "Zip-code based directory for food, housing, and more.",
+    "url": "https://www.findhelp.org/",
+    "city": "Statewide",
+    "category": "Multi-service",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "directory"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Your Texas Benefits (HHS)",
+    "description": "Apply for SNAP, Medicaid, TANF, and more.",
+    "url": "https://www.yourtexasbenefits.com/",
+    "city": "Statewide",
+    "category": "Multi-service",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "benefits"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Benefits.gov — Texas",
+    "description": "Explore federal and state benefit programs.",
+    "url": "https://www.benefits.gov/",
+    "city": "Statewide",
+    "category": "Multi-service",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "benefits"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Feeding Texas — Find Help",
+    "description": "Connect to food banks across Texas.",
+    "url": "https://www.feedingtexas.org/need-help/",
+    "city": "Statewide",
+    "category": "Food",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "food-bank"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Houston Food Bank — Get Help",
+    "description": "Find food assistance in Greater Houston.",
+    "url": "https://www.houstonfoodbank.org/find-help/",
+    "city": "Houston",
+    "category": "Food",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "pantry",
+      "meals"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Central Texas Food Bank — Get Help",
+    "description": "Food pantries and meal programs in Central TX.",
+    "url": "https://www.centraltexasfoodbank.org/get-help",
+    "city": "Austin",
+    "category": "Food",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "pantry"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "North Texas Food Bank — Get Food",
+    "description": "Dallas-area distributions and pantries.",
+    "url": "https://ntfb.org/get-help/",
+    "city": "Dallas",
+    "category": "Food",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "pantry"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "San Antonio Food Bank — Get Help",
+    "description": "Find food today in San Antonio and beyond.",
+    "url": "https://safoodbank.org/gethelp/",
+    "city": "San Antonio",
+    "category": "Food",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "pantry"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "El Pasoans Fighting Hunger — Get Food",
+    "description": "Distributions in El Paso County.",
+    "url": "https://www.elpasoansfightinghunger.org/get-food/",
+    "city": "El Paso",
+    "category": "Food",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "pantry"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Food Bank RGV — Find Help",
+    "description": "Food assistance in the Rio Grande Valley.",
+    "url": "https://foodbankrgv.com/our-programs/emergency-food/",
+    "city": "Rio Grande Valley",
+    "category": "Food",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "pantry"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "TDHCA — Help for Texans",
+    "description": "Find rent, utility, and home repair help.",
+    "url": "https://www.tdhca.state.tx.us/texans.htm",
+    "city": "Statewide",
+    "category": "Housing",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "rent",
+      "repairs"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "HUD — Texas",
+    "description": "Public housing and HUD-approved counseling.",
+    "url": "https://www.hud.gov/states/texas",
+    "city": "Statewide",
+    "category": "Housing",
+    "cost": "Varies",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "hud",
+      "counseling"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Houston Housing Authority",
+    "description": "Public housing and voucher information.",
+    "url": "https://www.housingforhouston.com/",
+    "city": "Houston",
+    "category": "Housing",
+    "cost": "Varies",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "pha",
+      "voucher"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Opportunity Home San Antonio",
+    "description": "Public housing and Section 8 in San Antonio.",
+    "url": "https://homesa.org/",
+    "city": "San Antonio",
+    "category": "Housing",
+    "cost": "Varies",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "pha"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Dallas Housing Authority",
+    "description": "Assistance and housing programs for Dallas.",
+    "url": "https://www.dhatx.com/",
+    "city": "Dallas",
+    "category": "Housing",
+    "cost": "Varies",
+    "accessibility": [],
+    "tags": [
+      "pha"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Austin Tenants Council",
+    "description": "Tenant rights, mediation, and counseling.",
+    "url": "https://www.housing-rights.org/",
+    "city": "Austin",
+    "category": "Housing",
+    "cost": "Free",
+    "accessibility": [],
+    "tags": [
+      "tenant-rights"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "MentalHealthTX.org",
+    "description": "Texas mental health information and help lines.",
+    "url": "https://mentalhealthtx.org/",
+    "city": "Statewide",
+    "category": "Mental Health",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "info",
+      "help-lines"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "NAMI Texas",
+    "description": "Education, support groups, and advocacy.",
+    "url": "https://www.namitexas.org/",
+    "city": "Statewide",
+    "category": "Mental Health",
+    "cost": "Free",
+    "accessibility": [],
+    "tags": [
+      "support"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Integral Care (Austin)",
+    "description": "Community mental health services in Travis County.",
+    "url": "https://www.integralcare.org/",
+    "city": "Austin",
+    "category": "Mental Health",
+    "cost": "Low-cost",
+    "accessibility": [
+      "Spanish",
+      "Telehealth"
+    ],
+    "tags": [
+      "community"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "The Harris Center (Houston)",
+    "description": "Community behavioral health in Harris County.",
+    "url": "https://www.theharriscenter.org/",
+    "city": "Houston",
+    "category": "Mental Health",
+    "cost": "Low-cost",
+    "accessibility": [
+      "Spanish",
+      "Telehealth"
+    ],
+    "tags": [
+      "community"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Metrocare Services (Dallas)",
+    "description": "Mental health care for Dallas County.",
+    "url": "https://www.metrocareservices.org/",
+    "city": "Dallas",
+    "category": "Mental Health",
+    "cost": "Low-cost",
+    "accessibility": [
+      "Spanish",
+      "Telehealth"
+    ],
+    "tags": [
+      "community"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "CHCS (San Antonio)",
+    "description": "The Center for Health Care Services, Bexar County.",
+    "url": "https://chcsbc.org/",
+    "city": "San Antonio",
+    "category": "Mental Health",
+    "cost": "Low-cost",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "community"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Emergence Health Network (El Paso)",
+    "description": "Behavioral health services for El Paso County.",
+    "url": "https://emergencehealthnetwork.org/",
+    "city": "El Paso",
+    "category": "Mental Health",
+    "cost": "Low-cost",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "community"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "TexasLawHelp.org",
+    "description": "Free civil legal information and forms.",
+    "url": "https://texaslawhelp.org/",
+    "city": "Statewide",
+    "category": "Legal",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "forms",
+      "civil"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas RioGrande Legal Aid (TRLA)",
+    "description": "Free civil legal services in Southwest Texas.",
+    "url": "https://www.trla.org/",
+    "city": "South Texas",
+    "category": "Legal",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "legal-aid"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Lone Star Legal Aid",
+    "description": "Free civil legal help in East and Southeast Texas.",
+    "url": "https://www.lonestarlegal.org/",
+    "city": "Statewide",
+    "category": "Legal",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "legal-aid"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Legal Aid of NorthWest Texas",
+    "description": "Free civil legal services in North/Central Texas.",
+    "url": "https://www.lanwt.org/",
+    "city": "North Texas",
+    "category": "Legal",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "legal-aid"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "LawHelp.org",
+    "description": "Find legal help and know your rights nationwide.",
+    "url": "https://www.lawhelp.org/",
+    "city": "Statewide",
+    "category": "Legal",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "directory"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "TWC — Job Seekers",
+    "description": "Texas Workforce Commission job search and support.",
+    "url": "https://www.twc.texas.gov/jobseekers",
+    "city": "Statewide",
+    "category": "Education",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "jobs",
+      "training"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Apprenticeship.gov",
+    "description": "Explore paid apprenticeships across the U.S.",
+    "url": "https://www.apprenticeship.gov/",
+    "city": "Statewide",
+    "category": "Education",
+    "cost": "Free",
+    "accessibility": [],
+    "tags": [
+      "apprenticeship"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Job Corps",
+    "description": "Free education and job training for ages 16–24.",
+    "url": "https://www.jobcorps.gov/",
+    "city": "Statewide",
+    "category": "Education",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "youth",
+      "training"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Austin Community College — Adult Education",
+    "description": "GED, ESL, and career pathways.",
+    "url": "https://www.austincc.edu/academic-and-career-programs/adult-education",
+    "city": "Austin",
+    "category": "Education",
+    "cost": "Low-cost",
+    "accessibility": [],
+    "tags": [
+      "GED",
+      "ESL"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Goodwill Central Texas — Careers",
+    "description": "Training, certifications, and job placement.",
+    "url": "https://www.goodwillcentraltexas.org/education-career",
+    "city": "Central Texas",
+    "category": "Education",
+    "cost": "Free",
+    "accessibility": [],
+    "tags": [
+      "training"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "GetInternet.gov",
+    "description": "Find low-cost internet options and programs.",
+    "url": "https://www.getinternet.gov/",
+    "city": "Statewide",
+    "category": "Utilities",
+    "cost": "Varies",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "internet"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Lifeline Program",
+    "description": "Monthly phone or internet discount for eligible households.",
+    "url": "https://www.lifelinesupport.org/",
+    "city": "Statewide",
+    "category": "Utilities",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "phone",
+      "internet"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "TDHCA — Energy Assistance (CEAP)",
+    "description": "Help with utility bills for income-eligible households.",
+    "url": "https://www.tdhca.state.tx.us/community-affairs/ceap/",
+    "city": "Statewide",
+    "category": "Utilities",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "utilities",
+      "energy"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "LIHEAP — Texas",
+    "description": "Federal energy assistance information for Texans.",
+    "url": "https://www.benefits.gov/benefit/1553",
+    "city": "Statewide",
+    "category": "Utilities",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "utilities",
+      "energy"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "CapMetro — Austin",
+    "description": "Local bus and rail in Austin area.",
+    "url": "https://www.capmetro.org/",
+    "city": "Austin",
+    "category": "Transportation",
+    "cost": "Varies",
+    "accessibility": [],
+    "tags": [
+      "bus",
+      "rail"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "DART — Dallas",
+    "description": "Dallas Area Rapid Transit.",
+    "url": "https://www.dart.org/",
+    "city": "Dallas",
+    "category": "Transportation",
+    "cost": "Varies",
+    "accessibility": [],
+    "tags": [
+      "bus",
+      "rail"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "METRO — Houston",
+    "description": "Houston METRO buses, rail, and paratransit.",
+    "url": "https://www.ridemetro.org/",
+    "city": "Houston",
+    "category": "Transportation",
+    "cost": "Varies",
+    "accessibility": [],
+    "tags": [
+      "bus",
+      "rail"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "VIA — San Antonio",
+    "description": "San Antonio public transit.",
+    "url": "https://www.viainfo.net/",
+    "city": "San Antonio",
+    "category": "Transportation",
+    "cost": "Varies",
+    "accessibility": [],
+    "tags": [
+      "bus"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Sun Metro — El Paso",
+    "description": "El Paso public transit.",
+    "url": "https://www.sunmetro.net/",
+    "city": "El Paso",
+    "category": "Transportation",
+    "cost": "Varies",
+    "accessibility": [],
+    "tags": [
+      "bus"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas WIC",
+    "description": "Nutrition for women, infants, and children.",
+    "url": "https://www.texaswic.org/",
+    "city": "Statewide",
+    "category": "Youth & Families",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "wic",
+      "nutrition"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "TWC — Child Care Services",
+    "description": "Help paying for child care while you work or go to school.",
+    "url": "https://www.twc.texas.gov/programs/child-care-services-program-overview",
+    "city": "Statewide",
+    "category": "Youth & Families",
+    "cost": "Varies",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "childcare"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Boys & Girls Clubs — Find a Club",
+    "description": "After-school and summer programs.",
+    "url": "https://www.bgca.org/get-involved/find-a-club",
+    "city": "Statewide",
+    "category": "Youth & Families",
+    "cost": "Low-cost",
+    "accessibility": [],
+    "tags": [
+      "after-school"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "YMCA — Find Your Y",
+    "description": "Family programs, camps, and sports.",
+    "url": "https://www.ymca.org/find-your-y",
+    "city": "Statewide",
+    "category": "Youth & Families",
+    "cost": "Varies",
+    "accessibility": [],
+    "tags": [
+      "youth",
+      "family"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Texas Parent Helpline",
+    "description": "Free parenting support and resources.",
+    "url": "https://txparent.org/",
+    "city": "Statewide",
+    "category": "Youth & Families",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "parenting",
+      "helpline"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "RAICES",
+    "description": "Legal services for immigrants and refugees.",
+    "url": "https://www.raicestexas.org/services/",
+    "city": "Statewide",
+    "category": "Immigration",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "immigration",
+      "legal"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "American Gateways",
+    "description": "Immigration legal services in Central Texas.",
+    "url": "https://www.americangateways.org/",
+    "city": "Central Texas",
+    "category": "Immigration",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "legal"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Catholic Charities — Immigration (Houston)",
+    "description": "Low-cost immigration legal services.",
+    "url": "https://catholiccharities.org/what-we-do/immigration-and-refugee-services/",
+    "city": "Houston",
+    "category": "Immigration",
+    "cost": "Low-cost",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "legal"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "ILRC — Immigrant Legal Resource Center",
+    "description": "Know-your-rights materials and legal resources.",
+    "url": "https://www.ilrc.org/",
+    "city": "Statewide",
+    "category": "Immigration",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "rights"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "211 Texas — Español",
+    "description": "Busque ayuda en su comunidad (alimentos, vivienda, más).",
+    "url": "https://www.211texas.org/",
+    "city": "Statewide",
+    "category": "Multi-service",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "directorio"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "Línea 988 — Español",
+    "description": "Ayuda emocional 24/7 por teléfono, chat o texto.",
+    "url": "https://988lifeline.org/",
+    "city": "Statewide",
+    "category": "Mental Health",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish",
+      "24-7"
+    ],
+    "tags": [
+      "hotline"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "TexasLawHelp — Español",
+    "description": "Información legal civil gratis y formularios.",
+    "url": "https://texaslawhelp.org/es",
+    "city": "Statewide",
+    "category": "Legal",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "legal"
+    ],
+    "updated": "2025-10-15"
+  },
+  {
+    "name": "WIC Texas — Español",
+    "description": "Nutrición para mujeres, bebés y niños.",
+    "url": "https://www.texaswic.org/es",
+    "city": "Statewide",
+    "category": "Youth & Families",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "tags": [
+      "wic"
+    ],
+    "updated": "2025-10-15"
+  }
+]
