@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Texas Resource Hub</title>
+  <link rel="manifest" href="manifest.webmanifest"/>
+  <link rel="icon" href="img/pwa-192.png" type="image/png"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="section header-flex">
+      <a href="#top" class="logo">Texas Resource Hub</a>
+      <nav>
+        <button class="nav-toggle" aria-label="Open navigation">☰</button>
+        <ul class="nav" id="main-nav">
+          <li><a href="#browse" data-scroll>Directory</a></li>
+          <li><a href="#highlights" data-scroll>Highlights</a></li>
+          <li><a href="#sos" data-scroll>SOS</a></li>
+          <li><a href="#why" data-scroll>Why this matters</a></li>
+          <li><a href="#suggest" data-scroll>Suggest</a></li>
+          <li><a href="#reference" data-scroll>Reference</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" class="section hero card">
+    <h1>Find help. Jobs.</h1>
+    <p class="muted">One place to discover programs across Texas—food, housing, mental health, education, jobs, and more.</p>
+    <div class="buttons">
+      <a href="#browse" class="btn" data-scroll>Browse Directory</a>
+      <a href="#highlights" class="btn btn-ghost" data-scroll>View Highlights</a>
+      <a href="#sos" class="btn btn-ghost" data-scroll>Open SOS</a>
+    </div>
+  </section>
+
+  <section id="highlights" class="section">
+    <h2>Start fast</h2>
+    <div class="card-grid">
+      <article id="sos" class="card sos-card">
+        <div class="sos-card-header">
+          <span class="pill">sos</span>
+          <h3 class="card-title">Emergency checklist</h3>
+        </div>
+        <p class="muted">Downloadable checklist + offline tips. Works without power or signal.</p>
+        <div class="sos-actions">
+          <a class="btn" href="docs/sos-checklist.html" target="_blank" rel="noopener">Open checklist</a>
+          <a class="btn btn-ghost" href="https://www.ready.gov/kit" target="_blank" rel="noopener">Ready.gov kit</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3 class="card-title"><a href="#browse" data-scroll>Food Assistance</a></h3>
+        <p class="muted">Pantries, meals, and nutrition support statewide.</p>
+        <span class="pill">Popular</span>
+      </article>
+      <article class="card">
+        <h3 class="card-title"><a href="#browse" data-scroll>Mental Health</a></h3>
+        <p class="muted">Counseling, crisis lines, and virtual support.</p>
+        <span class="pill">24/7</span>
+      </article>
+      <article class="card">
+        <h3 class="card-title"><a href="#browse" data-scroll>Housing</a></h3>
+        <p class="muted">Shelters, rent help, repairs, and mediation.</p>
+        <span class="pill">Urgent</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="why" class="section">
+    <h2>Why this matters</h2>
+    <div class="card-grid">
+      <article class="card"><h3 class="card-title">Simple & fast</h3><p class="muted">Find help in minutes, not hours.</p></article>
+      <article class="card"><h3 class="card-title">Trusted sources</h3><p class="muted">We link to official agencies and partners.</p></article>
+      <article class="card"><h3 class="card-title">Works offline</h3><p class="muted">Install the app and keep the SOS checklist.</p></article>
+    </div>
+  </section>
+
+  <section id="browse" class="section">
+    <div class="results-hdr">
+      <h2>Browse the directory</h2>
+      <div id="results-count" class="muted">Loading…</div>
+    </div>
+
+    <form id="filters" class="filters" autocomplete="off">
+      <input type="search" name="q" placeholder="Search resources…"/>
+      <select name="category">
+        <option value="">Category</option>
+        <option>Emergencies</option><option>Food</option><option>Housing</option><option>Mental Health</option>
+        <option>Utilities</option><option>Education</option><option>Legal</option><option>Transportation</option>
+        <option>Youth & Families</option><option>Immigration</option><option>Multi-service</option>
+      </select>
+      <select name="city">
+        <option value="">Region / City</option>
+        <option>Statewide</option><option>North Texas</option><option>Central Texas</option><option>South Texas</option>
+        <option>Austin</option><option>Dallas</option><option>Fort Worth</option><option>Houston</option>
+        <option>San Antonio</option><option>El Paso</option><option>Rio Grande Valley</option>
+      </select>
+      <select name="cost"><option value="">Cost</option><option>Free</option><option>Low-cost</option><option>Varies</option></select>
+      <select name="accessibility"><option value="">Access</option><option>Spanish</option><option>24-7</option><option>Telehealth</option><option>Walk-in</option></select>
+      <select name="sort"><option value="name-asc">Sort A–Z</option><option value="name-desc">Sort Z–A</option><option value="city-asc">City A–Z</option><option value="updated-desc">Updated (newest)</option></select>
+      <button id="reset-filters" type="button" class="btn btn-ghost small">Reset</button>
+      <input type="hidden" name="initial" id="initial" value=""/>
+    </form>
+
+    <div class="abc" id="az">
+      <button data-initial="" class="active">All</button>
+      <script>"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").forEach(l=>document.currentScript.insertAdjacentHTML("afterend",`<button data-initial="${l}">${l}</button>`));</script>
+    </div>
+
+    <div id="active-filters" class="muted pills-row"></div>
+
+    <div id="directory" class="grid-cards" aria-live="polite"><div class="muted">Loading…</div></div>
+
+    <template id="resource-card">
+      <article class="card rc" tabindex="0">
+        <div class="rc-logo-wrap"></div>
+        <h3 class="rc-title"></h3>
+        <div class="rc-meta"></div>
+        <p class="rc-desc"></p>
+        <div class="rc-tags"></div>
+        <div class="rc-actions"><a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Visit site</a></div>
+      </article>
+    </template>
+  </section>
+
+  <section id="suggest" class="section">
+    <h2>Suggest a resource</h2>
+    <p class="muted">Know a great program that should be listed? Email: <a href="mailto:Texas.Web.D@gmail.com">Texas.Web.D@gmail.com</a></p>
+  </section>
+
+  <section id="reference" class="section">
+    <h2>Reference</h2>
+    <div class="card-grid">
+      <article class="card"><strong>Eligibility Rules</strong><p class="muted">Income, residency, documentation, and more.</p></article>
+      <article class="card"><strong>Data Sources</strong><p class="muted">Public datasets and partner directories we ingest.</p></article>
+      <article class="card"><strong>Quality Checks</strong><p class="muted">How we review and update listings.</p></article>
+    </div>
+  </section>
+
+  <footer class="site-footer"><div class="section">© 2025 Texas Resource Hub</div></footer>
+
+  <script>
+  const navToggle=document.querySelector('.nav-toggle');const nav=document.getElementById('main-nav');
+  navToggle?.addEventListener('click',()=>nav.classList.toggle('open'));
+  document.querySelectorAll('[data-scroll]').forEach(a=>{a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id?.startsWith('#')){e.preventDefault();const el=document.querySelector(id); if(el){window.scrollTo({top:el.getBoundingClientRect().top+scrollY-72,behavior:'smooth'});nav?.classList.remove('open')}}})});
+  </script>
+
+  <script defer src="js/directory.js"></script>
+  <script defer src="js/sw-register.js"></script>
+</body>
+</html>
