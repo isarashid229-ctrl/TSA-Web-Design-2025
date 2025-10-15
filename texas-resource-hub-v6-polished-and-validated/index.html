@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Texas Resource Hub</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f766e"/>
+
+  <link rel="stylesheet" href="assets/css/theme.css">
+</head><body>
+<header class="site-header"><div class="container header-flex">
+  <a class="logo" href="#top">Texas Resource Hub</a>
+  <nav><ul>
+    <li><a href="#directory">Directory</a></li><li><a href="#highlights">Highlights</a></li>
+    <li><a href="#sos">SOS</a></li><li><a href="#why">Why this matters</a></li>
+    <li><a href="#suggest">Suggest</a></li><li><a href="#reference">Reference</a></li>
+  </ul></nav></div></header>
+
+<main id="top">
+<section class="container hero">
+  <h1>Find help. Jobs.</h1><p>One place to discover programs across Texas—food, housing, mental health, education, jobs, and more.</p>
+  <div class="sos-actions"><a class="badge" href="#directory">Browse directory</a><a class="badge" href="#highlights">View highlights</a><a class="badge" href="#suggest">Suggest a resource</a></div>
+</section>
+
+<section id="sos" class="container" style="margin-top:18px">
+  <article class="sos-banner"><h3>Emergency &amp; SOS pack</h3>
+    <p>Stay ready when the power or internet is out. Download a printable checklist and an offline app you can install now.</p>
+    <div class="sos-actions"><a class="btn" href="offline.html">Open offline checklist</a><a class="btn btn-secondary" href="#" id="install-btn" hidden>Install app</a></div>
+  </article>
+</section>
+
+<section id="highlights" class="container" style="margin-top:16px">
+  <div class="grid-3">
+    <div class="card"><h3>Food Assistance</h3><p>Pantries, meals, and nutrition support statewide.</p></div>
+    <div class="card"><h3>Mental Health</h3><p>Crisis lines, counseling, and virtual support.</p></div>
+    <div class="card"><h3>Housing</h3><p>Shelters, rent help, repairs, and mediation.</p></div>
+  </div>
+</section>
+
+<section id="why" class="container">
+  <h2>Why this matters</h2>
+  <div class="grid-3">
+    <div class="card"><h3>Simple &amp; fast</h3><p>We cut the noise so you can find help in minutes, not hours.</p></div>
+    <div class="card"><h3>Trusted sources</h3><p>We link directly to official agencies, legal aid, and community partners.</p></div>
+    <div class="card"><h3>Works offline</h3><p>Install the app and keep the SOS checklist even without internet.</p></div>
+  </div>
+</section>
+
+<section id="directory" class="container">
+  <h2>Browse the directory</h2>
+  <form id="filters" class="filters">
+    <input type="search" name="q" placeholder="Search resources…">
+    <select name="category"><option value="">Category</option><option>Food</option><option>Housing</option><option>Mental Health</option><option>Legal</option><option>Education</option><option>Utilities</option><option>Emergency</option></select>
+    <select name="city"><option value="">Region / City</option><option>Statewide</option><option>Austin</option><option>Dallas</option><option>San Antonio</option><option>Houston</option><option>Fort Worth</option><option>El Paso</option></select>
+    <select name="cost"><option value="">Cost</option><option>Free</option><option>Low cost</option></select>
+    <select name="accessibility"><option value="">Access</option><option>Spanish</option><option>Veterans</option><option>Students</option></select>
+    <select name="sort"><option value="name-asc">Sort A–Z</option><option value="name-desc">Sort Z–A</option><option value="updated-desc">Updated (newest)</option></select>
+  </form>
+  <div class="results-head"><div id="results-count">0 results</div><button id="reset-filters" class="btn btn-secondary" type="button">Reset</button></div>
+  <div class="az" id="az"></div>
+  <div id="active-filters" style="margin:10px 0;"></div>
+  <template id="resource-card"><article class="card card-resource"><div class="card-title"><h3></h3></div><div class="card-meta"></div><p class="card-desc"></p><div class="card-tags"></div><div class="card-actions"><a class="btn" href="#" target="_blank" rel="noopener">Visit site</a></div></article></template>
+  <div id="directory-root" class="grid-3"></div>
+</section>
+
+<section id="suggest" class="container"><h2>Suggest a resource</h2><p>Know a great program that should be listed? Email: <a href="mailto:Texas.Web.D@gmail.com">Texas.Web.D@gmail.com</a></p></section>
+<section id="reference" class="container"><h2>Reference</h2>
+  <ul class="features"><li><strong>Eligibility Rules</strong> – How we organize income limits, residency, documentation, and more.</li><li><strong>Data Sources</strong> – Public datasets and partner directories we ingest.</li><li><strong>Quality Checks</strong> – How we review and update listings.</li></ul>
+</section>
+</main>
+<footer class="site-footer"><p>© 2025 Texas Resource Hub.</p></footer>
+<script src="js/app.js" defer></script>
+<script src="js/directory.js" defer></script>
+</body></html>

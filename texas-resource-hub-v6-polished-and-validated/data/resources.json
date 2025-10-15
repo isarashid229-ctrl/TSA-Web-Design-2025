@@ -1,0 +1,258 @@
+[
+  {
+    "name": "211 Texas \u2014 B\u00fasqueda guiada",
+    "url": "https://www.211texas.org/es/",
+    "city": "Statewide",
+    "category": "Emergency",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "updated": "2025-10-13",
+    "description": "Busque cl\u00ednicas, alimentos, vivienda y m\u00e1s.",
+    "tags": [
+      "spanish",
+      "directory"
+    ]
+  },
+  {
+    "name": "211 Texas \u2014 Guided Search",
+    "url": "https://www.211texas.org/",
+    "city": "Statewide",
+    "category": "Emergency",
+    "cost": "Free",
+    "accessibility": [],
+    "updated": "2025-10-13",
+    "description": "Find free or low\u2011cost clinics, food, utilities, transportation, and more.",
+    "tags": [
+      "directory",
+      "multi-service"
+    ]
+  },
+  {
+    "name": "988 L\u00ednea de Vida (en Espa\u00f1ol)",
+    "url": "https://988lifeline.org/help-yourself/en-espanol/",
+    "city": "Statewide",
+    "category": "Mental Health",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "updated": "2025-10-13",
+    "description": "L\u00ednea de ayuda 24/7 para crisis y salud mental en espa\u00f1ol.",
+    "tags": [
+      "spanish",
+      "hotline",
+      "24-7"
+    ]
+  },
+  {
+    "name": "Texas WIC (ES)",
+    "url": "https://texaswic.org/es",
+    "city": "Statewide",
+    "category": "Food",
+    "cost": "Free",
+    "accessibility": [
+      "Spanish"
+    ],
+    "updated": "2025-10-13",
+    "description": "Programa de nutrici\u00f3n para mujeres, beb\u00e9s y ni\u00f1os.",
+    "tags": [
+      "wic",
+      "spanish"
+    ]
+  },
+  {
+    "name": "Find a Health Center (HRSA)",
+    "url": "https://findahealthcenter.hrsa.gov/",
+    "city": "Statewide",
+    "category": "Medical",
+    "cost": "Low cost",
+    "accessibility": [
+      "Spanish"
+    ],
+    "updated": "2025-10-13",
+    "description": "Encuentre cl\u00ednicas comunitarias con atenci\u00f3n de bajo costo.",
+    "tags": [
+      "clinics",
+      "spanish"
+    ]
+  },
+  {
+    "name": "Affordable Connectivity Program",
+    "url": "https://www.affordableconnectivity.gov/",
+    "city": "Statewide",
+    "category": "Utilities",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Discounts on internet service for eligible households.",
+    "tags": [
+      "internet"
+    ]
+  },
+  {
+    "name": "American Red Cross \u2014 Make a Plan",
+    "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/make-a-plan.html",
+    "city": "Statewide",
+    "category": "Emergency",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Create a family disaster plan and emergency cards.",
+    "tags": [
+      "sos",
+      "planning",
+      "disaster"
+    ]
+  },
+  {
+    "name": "Houston Food Bank",
+    "url": "https://www.houstonfoodbank.org/find-help/agency-locator/",
+    "city": "Houston",
+    "category": "Food",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Find pantries and partners in Greater Houston.",
+    "tags": [
+      "food",
+      "houston"
+    ]
+  },
+  {
+    "name": "North Texas Food Bank",
+    "url": "https://ntfb.org/our-programs/get-food-assistance/",
+    "city": "Dallas",
+    "category": "Food",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Food pantries and assistance in North Texas.",
+    "tags": [
+      "food",
+      "dallas"
+    ]
+  },
+  {
+    "name": "San Antonio Food Bank",
+    "url": "https://safoodbank.org/get-help/",
+    "city": "San Antonio",
+    "category": "Food",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Get help with food in San Antonio and surrounding areas.",
+    "tags": [
+      "food",
+      "sanantonio"
+    ]
+  },
+  {
+    "name": "Central Texas Food Bank",
+    "url": "https://www.centraltexasfoodbank.org/get-help",
+    "city": "Austin",
+    "category": "Food",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Find food resources in Central Texas.",
+    "tags": [
+      "food",
+      "austin"
+    ]
+  },
+  {
+    "name": "El Pasoans Fighting Hunger",
+    "url": "https://elpasoansfightinghunger.org/get-help",
+    "city": "El Paso",
+    "category": "Food",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Food assistance for El Paso region.",
+    "tags": [
+      "food",
+      "elpaso"
+    ]
+  },
+  {
+    "name": "Texas Rent Relief (info)",
+    "url": "https://www.texasrentrelief.com/",
+    "city": "Statewide",
+    "category": "Housing",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Rent and utility assistance info and updates.",
+    "tags": [
+      "housing"
+    ]
+  },
+  {
+    "name": "Texas RioGrande Legal Aid",
+    "url": "https://www.trla.org/",
+    "city": "Statewide",
+    "category": "Legal",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Free civil legal services for eligible Texans.",
+    "tags": [
+      "legal"
+    ]
+  },
+  {
+    "name": "Lone Star Legal Aid",
+    "url": "https://www.lonestarlegal.org/",
+    "city": "Statewide",
+    "category": "Legal",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Legal help for low\u2011income residents in East, SE, and East\u2011Central Texas.",
+    "tags": [
+      "legal"
+    ]
+  },
+  {
+    "name": "Disability Rights Texas",
+    "url": "https://disabilityrightstx.org/en/get-help/",
+    "city": "Statewide",
+    "category": "Legal",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Protection and advocacy for Texans with disabilities.",
+    "tags": [
+      "legal",
+      "disability"
+    ]
+  },
+  {
+    "name": "WorkInTexas.com",
+    "url": "https://www.workintexas.com/",
+    "city": "Statewide",
+    "category": "Education",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Texas\u2019 job matching and referral system.",
+    "tags": [
+      "jobs"
+    ]
+  },
+  {
+    "name": "Apprenticeship Finder (DoL)",
+    "url": "https://www.apprenticeship.gov/apprenticeship-job-finder",
+    "city": "Statewide",
+    "category": "Education",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "Find paid apprenticeships across the U.S.",
+    "tags": [
+      "apprenticeship"
+    ]
+  },
+  {
+    "name": "Adult Education & Literacy (TWC)",
+    "url": "https://www.twc.texas.gov/programs/adult-education-and-literacy-program-overview",
+    "city": "Statewide",
+    "category": "Education",
+    "cost": "Free",
+    "updated": "2025-10-13",
+    "description": "GED prep, ESL classes, and more via TWC providers.",
+    "tags": [
+      "ESL",
+      "GED"
+    ]
+  }
+]
