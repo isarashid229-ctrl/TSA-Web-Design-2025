@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SOS — Emergency Checklist</title>
+<style>:root{--line:#e5e7eb;--text:#111}*{box-sizing:border-box}body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;margin:0;color:var(--text)}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);padding:12px 16px}
+.container{width:min(900px,92%);margin:0 auto;padding:16px 0 48px}
+h1{margin:.25rem 0 1rem;font-size:1.6rem}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}.card{border:1px solid var(--line);border-radius:12px;padding:14px}
+ul{list-style:none;margin:.5rem 0;padding:0} li{display:flex;gap:10px;align-items:flex-start;margin:.35rem 0}
+input[type=checkbox]{transform:scale(1.1);margin-top:.2rem}.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;border:1px solid #111;background:#111;color:#fff;text-decoration:none;font-weight:700}
+.btn-ghost{background:#fff;color:#111}@media print{header,.actions{display:none}; .card{break-inside:avoid}}
+</style></head>
+<body>
+<header><div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+  <strong>Texas Resource Hub — SOS</strong>
+  <div class="actions"><button class="btn" onclick="window.print()">Print</button><a class="btn btn-ghost" href="../index.html">Back to site</a></div>
+</div></header>
+<main class="container">
+  <h1>Emergency checklist</h1>
+  <p class="muted">Keep this page saved or printed. Works offline.</p>
+  <div class="grid">
+    <section class="card"><h3>Go-bag (72 hours)</h3><ul>
+      <li><input type="checkbox"> Water (1 gal/person/day)</li>
+      <li><input type="checkbox"> Non-perishable food + can opener</li>
+      <li><input type="checkbox"> Flashlight + extra batteries</li>
+      <li><input type="checkbox"> First-aid kit + prescriptions</li>
+      <li><input type="checkbox"> Power bank + cords</li>
+      <li><input type="checkbox"> Cash, keys, ID</li>
+      <li><input type="checkbox"> Warm clothes + blanket</li>
+    </ul></section>
+    <section class="card"><h3>Documents (copies)</h3><ul>
+      <li><input type="checkbox"> IDs, passports, birth certificates</li>
+      <li><input type="checkbox"> Insurance (home/auto/health)</li>
+      <li><input type="checkbox"> Medication list & providers</li>
+      <li><input type="checkbox"> Bank / account info</li>
+      <li><input type="checkbox"> Emergency contacts list</li>
+    </ul></section>
+    <section class="card"><h3>Home prep</h3><ul>
+      <li><input type="checkbox"> Turn off gas, water, electricity (if advised)</li>
+      <li><input type="checkbox"> Secure heavy furniture</li>
+      <li><input type="checkbox"> Fire extinguisher & smoke alarms</li>
+      <li><input type="checkbox"> Pet supplies / carriers</li>
+    </ul></section>
+    <section class="card"><h3>Contacts & info</h3><ul>
+      <li><input type="checkbox"> Family meet-up place</li>
+      <li><input type="checkbox"> Out-of-state contact</li>
+      <li><input type="checkbox"> Local shelter / evacuation info</li>
+      <li><input type="checkbox"> Utility emergency numbers</li>
+    </ul></section>
+  </div>
+  <p style="margin-top:16px">More: <a href="https://www.ready.gov/kit" target="_blank" rel="noopener">Ready.gov – Build a Kit</a></p>
+</main></body></html>
